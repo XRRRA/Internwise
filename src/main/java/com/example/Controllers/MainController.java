@@ -1,5 +1,7 @@
-package com.example.accessingdatamysql;
+package com.example.Controllers;
 
+import com.example.accessingdatamysql.User;
+import com.example.accessingdatamysql.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +24,7 @@ public class MainController {
         // @RequestParam means it is a parameter from the GET or POST request
 
         User n = new User();
-        n.setName(name);
+        n.setFName(name);
         n.setEmail(email);
         userRepository.save(n);
         return "Saved";
