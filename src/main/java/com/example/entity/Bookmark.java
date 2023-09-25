@@ -1,14 +1,14 @@
-package com.example.accessingdatamysql;
+package com.example.entity;
 
 import jakarta.persistence.*;
 
 import java.time.Instant;
 
 @Entity
-@Table(name = "application")
-public class Application {
+@Table(name = "bookmark")
+public class Bookmark {
     @Id
-    @Column(name = "application_id", nullable = false)
+    @Column(name = "bookmark_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -19,11 +19,8 @@ public class Application {
     @JoinColumn(name = "program_id")
     private Program program;
 
-    @Column(name = "application_date")
-    private Instant applicationDate;
-
-    @Column(name = "status", length = 16)
-    private String status;
+    @Column(name = "bookmark_date")
+    private Instant bookmarkDate;
 
     public Integer getId() {
         return id;
@@ -49,20 +46,12 @@ public class Application {
         this.program = program;
     }
 
-    public Instant getApplicationDate() {
-        return applicationDate;
+    public Instant getBookmarkDate() {
+        return bookmarkDate;
     }
 
-    public void setApplicationDate(Instant applicationDate) {
-        this.applicationDate = applicationDate;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setBookmarkDate(Instant bookmarkDate) {
+        this.bookmarkDate = bookmarkDate;
     }
 
 }

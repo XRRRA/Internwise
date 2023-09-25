@@ -1,4 +1,4 @@
-package com.example.accessingdatamysql;
+package com.example.entity;
 
 import jakarta.persistence.*;
 
