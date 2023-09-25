@@ -5,24 +5,24 @@ import jakarta.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(name = "application", schema = "internwise")
+@Table(name = "application")
 public class Application {
     @Id
-    @Column(name = "ApplicationID", nullable = false)
+    @Column(name = "application_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private User userID;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProgramID")
-    private Program programID;
+    @JoinColumn(name = "program_id")
+    private Program program;
 
-    @Column(name = "ApplicationDate")
+    @Column(name = "application_date")
     private Instant applicationDate;
 
-    @Column(name = "Status", length = 16)
+    @Column(name = "status", length = 16)
     private String status;
 
     public Integer getId() {
@@ -33,20 +33,20 @@ public class Application {
         this.id = id;
     }
 
-    public User getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserID(User userID) {
-        this.userID = userID;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Program getProgramID() {
-        return programID;
+    public Program getProgram() {
+        return program;
     }
 
-    public void setProgramID(Program programID) {
-        this.programID = programID;
+    public void setProgram(Program program) {
+        this.program = program;
     }
 
     public Instant getApplicationDate() {

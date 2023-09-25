@@ -3,30 +3,30 @@ package com.example.accessingdatamysql;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "company", schema = "internwise")
+@Table(name = "company")
 public class Company {
     @Id
-    @Column(name = "CompanyID", nullable = false)
+    @Column(name = "company_id", nullable = false)
     private Integer id;
 
-    @Column(name = "CompanyName", length = 64)
+    @Column(name = "company_name", length = 64)
     private String companyName;
 
-    @Column(name = "Industry", length = 64)
+    @Column(name = "industry", length = 64)
     private String industry;
 
-    @Column(name = "Website", length = 64)
+    @Column(name = "website", length = 64)
     private String website;
 
     @Lob
-    @Column(name = "Description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "Contacts", length = 24)
+    @Column(name = "contacts", length = 24)
     private String contacts;
 
     @Lob
-    @Column(name = "Socials")
+    @Column(name = "socials")
     private String socials;
 
     public Integer getId() {

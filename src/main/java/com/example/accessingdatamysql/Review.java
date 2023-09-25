@@ -5,28 +5,28 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "review", schema = "internwise")
+@Table(name = "review")
 public class Review {
     @Id
-    @Column(name = "ReviewID", nullable = false)
+    @Column(name = "review_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private User userID;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProgramID")
-    private Program programID;
+    @JoinColumn(name = "program_id")
+    private Program program;
 
-    @Column(name = "Rating_stars")
+    @Column(name = "rating_stars")
     private Byte ratingStars;
 
     @Lob
-    @Column(name = "Review_text")
+    @Column(name = "review_text")
     private String reviewText;
 
-    @Column(name = "Review_date")
+    @Column(name = "review_date")
     private LocalDate reviewDate;
 
     public Integer getId() {
@@ -37,20 +37,20 @@ public class Review {
         this.id = id;
     }
 
-    public User getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserID(User userID) {
-        this.userID = userID;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Program getProgramID() {
-        return programID;
+    public Program getProgram() {
+        return program;
     }
 
-    public void setProgramID(Program programID) {
-        this.programID = programID;
+    public void setProgram(Program program) {
+        this.program = program;
     }
 
     public Byte getRatingStars() {

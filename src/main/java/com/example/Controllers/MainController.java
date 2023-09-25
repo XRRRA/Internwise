@@ -1,6 +1,5 @@
 package com.example.Controllers;
 
-import com.example.accessingdatamysql.User;
 import com.example.accessingdatamysql.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

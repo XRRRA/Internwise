@@ -6,54 +6,54 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "program", schema = "internwise")
+@Table(name = "program")
 public class Program {
     @Id
-    @Column(name = "ProgramID", nullable = false)
+    @Column(name = "program_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private User userID;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CompanyID")
-    private Company companyID;
+    @JoinColumn(name = "company_id")
+    private Company company;
 
-    @Column(name = "Title", length = 64)
+    @Column(name = "title", length = 64)
     private String title;
 
     @Lob
-    @Column(name = "Description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "StartDate")
+    @Column(name = "start_date")
     private LocalDate startDate;
 
-    @Column(name = "EdnDate")
-    private LocalDate ednDate;
+    @Column(name = "end_date")
+    private LocalDate endDate;
 
     @Lob
-    @Column(name = "Duration")
+    @Column(name = "duration")
     private String duration;
 
-    @Column(name = "Location", length = 64)
+    @Column(name = "location", length = 64)
     private String location;
 
-    @Column(name = "Salary", precision = 10)
+    @Column(name = "salary", precision = 10)
     private BigDecimal salary;
 
-    @Column(name = "Deadline")
+    @Column(name = "deadline")
     private LocalDate deadline;
 
-    @Column(name = "Nr_positions")
+    @Column(name = "nr_positions")
     private Byte nrPositions;
 
     @Lob
-    @Column(name = "ReqKnowledge")
-    private String reqKnowledge;
+    @Column(name = "knowledge_recommendations")
+    private String knowledgeRecommendations;
 
-    @Column(name = "ReviewCount")
+    @Column(name = "review_count")
     private Integer reviewCount;
 
     public Integer getId() {
@@ -64,20 +64,20 @@ public class Program {
         this.id = id;
     }
 
-    public User getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserID(User userID) {
-        this.userID = userID;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Company getCompanyID() {
-        return companyID;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setCompanyID(Company companyID) {
-        this.companyID = companyID;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public String getTitle() {
@@ -104,12 +104,12 @@ public class Program {
         this.startDate = startDate;
     }
 
-    public LocalDate getEdnDate() {
-        return ednDate;
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
-    public void setEdnDate(LocalDate ednDate) {
-        this.ednDate = ednDate;
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     public String getDuration() {
@@ -152,12 +152,12 @@ public class Program {
         this.nrPositions = nrPositions;
     }
 
-    public String getReqKnowledge() {
-        return reqKnowledge;
+    public String getKnowledgeRecommendations() {
+        return knowledgeRecommendations;
     }
 
-    public void setReqKnowledge(String reqKnowledge) {
-        this.reqKnowledge = reqKnowledge;
+    public void setKnowledgeRecommendations(String knowledgeRecommendations) {
+        this.knowledgeRecommendations = knowledgeRecommendations;
     }
 
     public Integer getReviewCount() {

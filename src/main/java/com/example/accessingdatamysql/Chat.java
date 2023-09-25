@@ -5,28 +5,28 @@ import jakarta.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(name = "chat", schema = "internwise")
+@Table(name = "chat")
 public class Chat {
     @Id
-    @Column(name = "ChatID", nullable = false)
+    @Column(name = "chat_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private User userID;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CompanyID")
-    private Company companyID;
+    @JoinColumn(name = "company_id")
+    private Company company;
 
     @Lob
-    @Column(name = "Message")
+    @Column(name = "message")
     private String message;
 
-    @Column(name = "TimeStamp")
+    @Column(name = "time_stamp")
     private Instant timeStamp;
 
-    @Column(name = "Status", length = 16)
+    @Column(name = "status", length = 16)
     private String status;
 
     public Integer getId() {
@@ -37,20 +37,20 @@ public class Chat {
         this.id = id;
     }
 
-    public User getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserID(User userID) {
-        this.userID = userID;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Company getCompanyID() {
-        return companyID;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setCompanyID(Company companyID) {
-        this.companyID = companyID;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public String getMessage() {

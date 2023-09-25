@@ -3,33 +3,33 @@ package com.example.accessingdatamysql;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users", schema = "internwise")
+@Table(name = "user")
 public class User {
     @Id
-    @Column(name = "UserID", nullable = false)
+    @Column(name = "user_id", nullable = false)
     private Integer id;
 
-    @Column(name = "FName", length = 64)
-    private String fName;
+    @Column(name = "first_name", length = 64)
+    private String firstName;
 
-    @Column(name = "LName", length = 64)
-    private String lName;
+    @Column(name = "last_name", length = 64)
+    private String lastName;
 
-    @Column(name = "Email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "Password", length = 64)
+    @Column(name = "password", length = 64)
     private String password;
 
     @Lob
-    @Column(name = "Education")
+    @Column(name = "education")
     private String education;
 
     @Lob
-    @Column(name = "Experience")
+    @Column(name = "experience")
     private String experience;
 
-    @Column(name = "Contacts", length = 24)
+    @Column(name = "contacts", length = 24)
     private String contacts;
 
     public Integer getId() {
@@ -40,20 +40,20 @@ public class User {
         this.id = id;
     }
 
-    public String getFName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

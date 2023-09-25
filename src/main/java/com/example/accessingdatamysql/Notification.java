@@ -5,24 +5,24 @@ import jakarta.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(name = "notification", schema = "internwise")
+@Table(name = "notification")
 public class Notification {
     @Id
-    @Column(name = "NotificationID", nullable = false)
+    @Column(name = "notification_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private User userID;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Lob
-    @Column(name = "Notification_content")
+    @Column(name = "notification_content")
     private String notificationContent;
 
-    @Column(name = "Timestamp")
+    @Column(name = "timestamp")
     private Instant timestamp;
 
-    @Column(name = "Status", length = 8)
+    @Column(name = "status", length = 8)
     private String status;
 
     public Integer getId() {
@@ -33,12 +33,12 @@ public class Notification {
         this.id = id;
     }
 
-    public User getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserID(User userID) {
-        this.userID = userID;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getNotificationContent() {

@@ -5,21 +5,21 @@ import jakarta.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(name = "bookmark", schema = "internwise")
+@Table(name = "bookmark")
 public class Bookmark {
     @Id
-    @Column(name = "BookmarkID", nullable = false)
+    @Column(name = "bookmark_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private User userID;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProgramID")
-    private Program programID;
+    @JoinColumn(name = "program_id")
+    private Program program;
 
-    @Column(name = "BookmarkDate")
+    @Column(name = "bookmark_date")
     private Instant bookmarkDate;
 
     public Integer getId() {
@@ -30,20 +30,20 @@ public class Bookmark {
         this.id = id;
     }
 
-    public User getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserID(User userID) {
-        this.userID = userID;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Program getProgramID() {
-        return programID;
+    public Program getProgram() {
+        return program;
     }
 
-    public void setProgramID(Program programID) {
-        this.programID = programID;
+    public void setProgram(Program program) {
+        this.program = program;
     }
 
     public Instant getBookmarkDate() {
