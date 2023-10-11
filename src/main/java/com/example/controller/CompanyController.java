@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.entity.Company;
+import com.example.entities.Company;
 import com.example.service.CompanyService;
 import com.example.service.response.PageableResponse;
 import org.springframework.stereotype.Controller;

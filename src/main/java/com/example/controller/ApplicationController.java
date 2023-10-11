@@ -1,9 +1,8 @@
 package com.example.controller;
 
-import com.example.entity.Application;
+import com.example.entities.Application;
 import com.example.service.ApplicationService;
 import com.example.service.response.PageableResponse;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

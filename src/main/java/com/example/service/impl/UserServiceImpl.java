@@ -1,6 +1,6 @@
 package com.example.service.impl;
 
-import com.example.entity.User;
+import com.example.entities.User;
 import com.example.repository.UserRepository;
 import com.example.service.UserService;
 import org.springframework.stereotype.Service;

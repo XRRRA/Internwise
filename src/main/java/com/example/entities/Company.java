@@ -1,9 +1,11 @@
-package com.example.entity;
+package com.example.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "company")
+@Table(name = "company", schema = "new_version")
 public class Company {
     @Id
     @Column(name = "company_id", nullable = false)
@@ -28,6 +30,9 @@ public class Company {
     @Lob
     @Column(name = "socials")
     private String socials;
+
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
+    private List<Program> programs;
 
     public Integer getId() {
         return id;
@@ -85,4 +90,11 @@ public class Company {
         this.socials = socials;
     }
 
+    public List<Program> getPrograms() {
+        return programs;
+    }
+
+    public void setPrograms(List<Program> programs) {
+        this.programs = programs;
+    }
 }

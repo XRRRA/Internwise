@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.entity.User;
+import com.example.entities.User;
 import com.example.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

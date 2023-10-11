@@ -1,9 +1,9 @@
-package com.example.entity;
+package com.example.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users", schema = "new_version")
 public class User {
     @Id
     @Column(name = "user_id", nullable = false)

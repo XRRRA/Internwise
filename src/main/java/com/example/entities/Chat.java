@@ -1,11 +1,11 @@
-package com.example.entity;
+package com.example.entities;
 
 import jakarta.persistence.*;
 
 import java.time.Instant;
 
 @Entity
-@Table(name = "chat")
+@Table(name = "chat", schema = "new_version")
 public class Chat {
     @Id
     @Column(name = "chat_id", nullable = false)

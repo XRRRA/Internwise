@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.entity.Company;
+import com.example.entities.Company;
 import com.example.service.response.PageableResponse;
 
 public interface CompanyService {

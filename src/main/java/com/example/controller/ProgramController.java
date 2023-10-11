@@ -1,13 +1,10 @@
 package com.example.controller;
 
-import com.example.entity.Program;
+import com.example.entities.Program;
 import com.example.service.ProgramService;
 import com.example.service.response.PageableResponse;
-import org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.sound.sampled.Port;
 
 @Controller
 @RequestMapping(path="/programs")

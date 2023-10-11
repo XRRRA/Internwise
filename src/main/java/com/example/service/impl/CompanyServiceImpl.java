@@ -1,6 +1,6 @@
 package com.example.service.impl;
 
-import com.example.entity.Company;
+import com.example.entities.Company;
 import com.example.repository.CompanyRepository;
 import com.example.service.CompanyService;
 import com.example.service.response.PageableResponse;
