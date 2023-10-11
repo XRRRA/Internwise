@@ -1,0 +1,83 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+    <!-- ChangeSet for adding users -->
+    <changeSet author="your_author" id="unique-id-for-adding-users" labels="version-0.0.1">
+
+        <!-- Insert User 1 -->
+        <insert tableName="users">
+            <column name="user_id" value="1"/>
+            <column name="first_name" value="Liviu"/>
+            <column name="last_name" value="Iordan"/>
+            <column name="email" value="liviu.iordan@isa.utm.md"/>
+            <column name="password" value="Liviu123"/>
+            <column name="education" value="None"/>
+            <column name="experience" value="None"/>
+            <column name="contacts" value="liviu_ird"/>
+        </insert>
+
+        <!-- Insert User 2 -->
+        <insert tableName="users">
+            <column name="user_id" value="2"/>
+            <column name="first_name" value="Pavel"/>
+            <column name="last_name" value="Tapu"/>
+            <column name="email" value="pavel.tapu@isa.utm.md"/>
+            <column name="password" value="Pavel123"/>
+            <column name="education" value="None"/>
+            <column name="experience" value="None"/>
+            <column name="contacts" value="pavel_tp"/>
+        </insert>
+
+        <!-- Insert User 3 -->
+        <insert tableName="users">
+            <column name="user_id" value="3"/>
+            <column name="first_name" value="Ovidiu"/>
+            <column name="last_name" value="Lupan"/>
+            <column name="email" value="ovidiu.lupan@isa.utm.md"/>
+            <column name="password" value="Ovidiu123"/>
+            <column name="education" value="None"/>
+            <column name="experience" value="None"/>
+            <column name="contacts" value="ovidiu_lp"/>
+        </insert>
+
+        <!-- Insert User 4 -->
+        <insert tableName="users">
+            <column name="user_id" value="4"/>
+            <column name="first_name" value="Daniel"/>
+            <column name="last_name" value="Durbailo"/>
+            <column name="email" value="daniel.durbailo@isa.utm.md"/>
+            <column name="password" value="Daniel123"/>
+            <column name="education" value="None"/>
+            <column name="experience" value="None"/>
+            <column name="contacts" value="daniel_drb"/>
+        </insert>
+
+        <!-- Insert User 5 -->
+        <insert tableName="users">
+            <column name="user_id" value="5"/>
+            <column name="first_name" value="Adrian"/>
+            <column name="last_name" value="Postica"/>
+            <column name="email" value="adrian.postica@isa.utm.md"/>
+            <column name="password" value="Adrian123"/>
+            <column name="education" value="None"/>
+            <column name="experience" value="None"/>
+            <column name="contacts" value="adrian_pst"/>
+        </insert>
+
+        <!-- Insert User  -->
+        <!--        <insert tableName="users">-->
+        <!--            <column name="user_id" value=""/>-->
+        <!--            <column name="first_name" value=""/>-->
+        <!--            <column name="last_name" value=""/>-->
+        <!--            <column name="email" value=""/>-->
+        <!--            <column name="password" value=""/>-->
+        <!--            <column name="education" value=""/>-->
+        <!--            <column name="experience" value=""/>-->
+        <!--            <column name="contacts" value=""/>-->
+        <!--        </insert>-->
+
+    </changeSet>
+
+</databaseChangeLog>
