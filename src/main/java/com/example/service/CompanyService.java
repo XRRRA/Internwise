@@ -8,5 +8,5 @@ public interface CompanyService {
     Company findCompanyById(Integer id);
     boolean removeCompanyById(Integer id);
     PageableResponse<Company> getCompanies(Integer pageSize, Integer page);
-    Company updateCompanyById(Integer company);
+    Company updateCompany(Company company);
 }

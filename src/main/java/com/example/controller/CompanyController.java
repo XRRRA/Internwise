@@ -35,9 +35,9 @@ public class CompanyController {
         return companyService.getCompanies(pageSize, page);
     }
 
-    @PutMapping(path="/updateCompanyById")
-    public Company updateCompanyById(Integer id) {
-        return companyService.updateCompanyById(id);
+    @PutMapping(path="/updateCompany")
+    public Company updateCompany(Company company) {
+        return companyService.updateCompany(company);
     }
 }
 //finished
