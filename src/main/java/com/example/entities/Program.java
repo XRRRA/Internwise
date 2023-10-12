@@ -1,37 +1,27 @@
-package com.example.entity;
+package com.example.entities;
 
 import jakarta.persistence.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "program")
+@Table(name = "program", schema = "new_version")
 public class Program {
     @Id
     @Column(name = "program_id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @Column(name = "title", length = 64)
+    @Lob
+    @Column(name = "title")
     private String title;
 
     @Lob
     @Column(name = "description")
     private String description;
-
-    @Column(name = "start_date")
-    private LocalDate startDate;
-
-    @Column(name = "end_date")
-    private LocalDate endDate;
 
     @Lob
     @Column(name = "duration")
@@ -40,18 +30,31 @@ public class Program {
     @Column(name = "location", length = 64)
     private String location;
 
-    @Column(name = "salary", precision = 10)
-    private BigDecimal salary;
+    @Lob
+    @Column(name = "knowledge_needed")
+    private String knowledgeNeeded;
+
+    @Lob
+    @Column(name = "experience_needed")
+    private String experienceNeeded;
+
+    @Lob
+    @Column(name = "salary")
+    private String salary;
+
+    @Lob
+    @Column(name = "work_schedule")
+    private String workSchedule;
 
     @Column(name = "deadline")
     private LocalDate deadline;
 
-    @Column(name = "nr_positions")
-    private Byte nrPositions;
-
     @Lob
-    @Column(name = "knowledge_recommendations")
-    private String knowledgeRecommendations;
+    @Column(name = "work_place")
+    private String workPlace;
+
+    @Column(name = "nr_positions")
+    private Integer nrPositions;
 
     @Column(name = "review_count")
     private Integer reviewCount;
@@ -62,14 +65,6 @@ public class Program {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Company getCompany() {
@@ -96,22 +91,6 @@ public class Program {
         this.description = description;
     }
 
-    public LocalDate getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
-
-    public LocalDate getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
-
     public String getDuration() {
         return duration;
     }
@@ -128,12 +107,36 @@ public class Program {
         this.location = location;
     }
 
-    public BigDecimal getSalary() {
+    public String getKnowledgeNeeded() {
+        return knowledgeNeeded;
+    }
+
+    public void setKnowledgeNeeded(String knowledgeNeeded) {
+        this.knowledgeNeeded = knowledgeNeeded;
+    }
+
+    public String getExperienceNeeded() {
+        return experienceNeeded;
+    }
+
+    public void setExperienceNeeded(String experienceNeeded) {
+        this.experienceNeeded = experienceNeeded;
+    }
+
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(BigDecimal salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
+    }
+
+    public String getWorkSchedule() {
+        return workSchedule;
+    }
+
+    public void setWorkSchedule(String workSchedule) {
+        this.workSchedule = workSchedule;
     }
 
     public LocalDate getDeadline() {
@@ -144,20 +147,20 @@ public class Program {
         this.deadline = deadline;
     }
 
-    public Byte getNrPositions() {
+    public String getWorkPlace() {
+        return workPlace;
+    }
+
+    public void setWorkPlace(String workPlace) {
+        this.workPlace = workPlace;
+    }
+
+    public Integer getNrPositions() {
         return nrPositions;
     }
 
-    public void setNrPositions(Byte nrPositions) {
+    public void setNrPositions(Integer nrPositions) {
         this.nrPositions = nrPositions;
-    }
-
-    public String getKnowledgeRecommendations() {
-        return knowledgeRecommendations;
-    }
-
-    public void setKnowledgeRecommendations(String knowledgeRecommendations) {
-        this.knowledgeRecommendations = knowledgeRecommendations;
     }
 
     public Integer getReviewCount() {

@@ -1,11 +1,11 @@
-package com.example.entity;
+package com.example.entities;
 
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "review")
+@Table(name = "review", schema = "new_version")
 public class Review {
     @Id
     @Column(name = "review_id", nullable = false)
@@ -20,7 +20,7 @@ public class Review {
     private Program program;
 
     @Column(name = "rating_stars")
-    private Byte ratingStars;
+    private Integer ratingStars;
 
     @Lob
     @Column(name = "review_text")
@@ -53,11 +53,11 @@ public class Review {
         this.program = program;
     }
 
-    public Byte getRatingStars() {
+    public Integer getRatingStars() {
         return ratingStars;
     }
 
-    public void setRatingStars(Byte ratingStars) {
+    public void setRatingStars(Integer ratingStars) {
         this.ratingStars = ratingStars;
     }
 

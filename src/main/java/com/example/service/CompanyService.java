@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.entity.Company;
+import com.example.entities.Company;
 import com.example.service.response.PageableResponse;
 
 public interface CompanyService {
@@ -8,5 +8,5 @@ public interface CompanyService {
     Company findCompanyById(Integer id);
     boolean removeCompanyById(Integer id);
     PageableResponse<Company> getCompanies(Integer pageSize, Integer page);
-    Company updateCompanyById(Integer company);
+    Company updateCompany(Company company);
 }

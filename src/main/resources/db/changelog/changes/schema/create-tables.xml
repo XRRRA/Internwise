@@ -1,0 +1,136 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+    <!-- ChangeSet for creating the 'users' table -->
+    <changeSet author="admin" id="202309280930-create-users" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE users (
+                                   user_id int PRIMARY KEY,
+                                   first_name nvarchar(64),
+                                   last_name nvarchar(64),
+                                   email nvarchar(255),
+                                   password nvarchar(64),
+                                   education text,
+                                   experience text,
+                                   contacts nvarchar(24)
+            );
+            </sql>
+    </changeSet>
+
+    <!-- ChangeSet for creating the 'company' table -->
+    <changeSet author="admin" id="202309280930-create-company" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE company (
+                                     company_id int PRIMARY KEY,
+                                     company_name tinytext,
+                                     industry tinytext,
+                                     website nvarchar(64),
+                                     description text,
+                                     contacts text,
+                                     socials text
+            );
+            </sql>
+    </changeSet>
+
+    <!-- ChangeSet for creating the 'program' table -->
+    <changeSet author="admin" id="202309280930-create-program" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE program (
+                                     program_id int PRIMARY KEY,
+                                     company_id int,
+                                     title nvarchar(64),
+                                     description text,
+                                     duration tinytext,
+                                     location nvarchar(64),
+                                     knowledge_needed text,
+                                     experience_needed text,
+                                     salary tinytext,
+                                     work_schedule tinytext,
+                                     deadline date,
+                                     work_place tinytext,
+                                     nr_positions int,
+                                     review_count int,
+                                     FOREIGN KEY (company_id) REFERENCES company(company_id)
+            );
+            </sql>
+    </changeSet>
+
+    <!-- ChangeSet for creating the 'review' table -->
+    <changeSet author="admin" id="202309280930-create-review" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE review (
+                                    review_id int PRIMARY KEY,
+                                    user_id int,
+                                    program_id int,
+                                    rating_stars tinyint,
+                                    review_text text,
+                                    review_date date,
+                                    FOREIGN KEY (user_id) REFERENCES users(user_id),
+                                    FOREIGN KEY (program_id) REFERENCES program(program_id)
+            );
+            </sql>
+    </changeSet>
+
+
+    <!-- ChangeSet for creating the 'notification' table -->
+    <changeSet author="admin" id="202309280930-create-notification" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE notification (
+                                          notification_id int PRIMARY KEY,
+                                          user_id int,
+                                          notification_content text,
+                                          timestamp datetime,
+                                          status nvarchar(8),
+                                          FOREIGN KEY (user_id) REFERENCES users(user_id)
+            );
+            </sql>
+    </changeSet>
+
+    <!-- ChangeSet for creating the 'chat' table -->
+    <changeSet author="admin" id="202309280930-create-chat" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE chat (
+                                  chat_id int PRIMARY KEY,
+                                  user_id int,
+                                  company_id int,
+                                  message text,
+                                  time_stamp datetime,
+                                  status nvarchar(16),
+                                  FOREIGN KEY (user_id) REFERENCES users(user_id),
+                                  FOREIGN KEY (company_id) REFERENCES company(company_id)
+            );
+            </sql>
+    </changeSet>
+
+    <!-- ChangeSet for creating the 'bookmark' table -->
+    <changeSet author="admin" id="202309280930-create-bookmark" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE bookmark (
+                                      bookmark_id int PRIMARY KEY,
+                                      user_id int,
+                                      program_id int,
+                                      bookmark_date datetime,
+                                      FOREIGN KEY (user_id) REFERENCES users(user_id),
+                                      FOREIGN KEY (program_id) REFERENCES program(program_id)
+            );
+            </sql>
+    </changeSet>
+
+    <!-- ChangeSet for creating the 'application' table -->
+    <changeSet author="admin" id="202309280930-create-application" labels="version-0.0.1">
+        <sql>
+            CREATE TABLE application (
+                                         application_id int PRIMARY KEY,
+                                         user_id int,
+                                         program_id int,
+                                         application_date datetime,
+                                         status nvarchar(16),
+                                         FOREIGN KEY (user_id) REFERENCES users(user_id),
+                                         FOREIGN KEY (program_id) REFERENCES program(program_id)
+            );
+            </sql>
+    </changeSet>
+
+    </databaseChangeLog>

@@ -1,0 +1,172 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+    <!-- ChangeSet for adding users -->
+    <changeSet author="your_author" id="unique-id-for-adding-users" labels="version-0.0.1">
+
+        <!-- Insert program 1 -->
+        <insert tableName="program">
+            <column name="program_id" value="1"/>
+            <column name="company_id" value="1"/>
+            <column name="title" value="PM Internship"/>
+            <column name="description" value="Starting a career in IT field without a technical background? It is possible with Unifun! Unifun is"/>
+            <column name="duration" value="3 months"/>
+            <column name="location" value="Chisinau, Botanica"/>
+            <column name="knowledge_needed" value="None"/>
+            <column name="experience_needed" value="None"/>
+            <column name="salary" value="Unspecified"/>
+            <column name="work_schedule" value="Full-time"/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="10"/>
+        </insert>
+
+        <!-- Insert program 2 -->
+        <insert tableName="program">
+            <column name="program_id" value="2"/>
+            <column name="company_id" value="1"/>
+            <column name="title" value="Linux Admin - Project Management"/>
+            <column name="description" value="О программе Это уникальная возможность для выпускников последних курсов IT-факультетов, молодых спец"/>
+            <column name="duration" value="3 months"/>
+            <column name="location" value="Chișinău, Botanica bd. Decebal 6"/>
+            <column name="knowledge_needed" value="Any"/>
+            <column name="experience_needed" value="None"/>
+            <column name="salary" value="$250"/>
+            <column name="work_schedule" value="Full-time"/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="13"/>
+        </insert>
+
+        <!-- Insert program 3 -->
+        <insert tableName="program">
+            <column name="program_id" value="3"/>
+            <column name="company_id" value="1"/>
+            <column name="title" value="1C Junior DEV"/>
+            <column name="description" value="1C Junior DEV"/>
+            <column name="duration" value="3 months"/>
+            <column name="location" value="Chisinau, Botanica"/>
+            <column name="knowledge_needed" value="None"/>
+            <column name="experience_needed" value="None"/>
+            <column name="salary" value="$250"/>
+            <column name="work_schedule" value="Part-Time"/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office"/>
+            <column name="nr_positions" value="14"/>
+            <column name="review_count" value="20"/>
+        </insert>
+
+        <!-- Insert program 4 -->
+        <insert tableName="program">
+            <column name="program_id" value="4"/>
+            <column name="company_id" value="3"/>
+            <column name="title" value="Consultant impl 1C"/>
+            <column name="description" value="Specialist"/>
+            <column name="duration" value="3"/>
+            <column name="location" value="ch"/>
+            <column name="knowledge_needed" value="-"/>
+            <column name="experience_needed" value="-"/>
+            <column name="salary" value="-"/>
+            <column name="work_schedule" value="-"/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office-"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="15"/>
+        </insert>
+
+        <!-- Insert program 5 -->
+        <insert tableName="program">
+            <column name="program_id" value="5"/>
+            <column name="company_id" value="3"/>
+            <column name="title" value="Programmer 1C"/>
+            <column name="description" value="-"/>
+            <column name="duration" value="-"/>
+            <column name="location" value="-"/>
+            <column name="knowledge_needed" value="-"/>
+            <column name="experience_needed" value="-"/>
+            <column name="salary" value="-"/>
+            <column name="work_schedule" value="-"/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office-"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="15"/>
+        </insert>
+        <!-- Insert program 6 -->
+        <insert tableName="program">
+            <column name="program_id" value="6"/>
+            <column name="company_id" value="1"/>
+            <column name="title" value="Ceva Developer"/>
+            <column name="description" value=""/>
+            <column name="duration" value=""/>
+            <column name="location" value=""/>
+            <column name="knowledge_needed" value=""/>
+            <column name="experience_needed" value=""/>
+            <column name="salary" value=""/>
+            <column name="work_schedule" value=""/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="15"/>
+        </insert>
+
+        <!-- Insert program 7 -->
+        <insert tableName="program">
+            <column name="program_id" value="7"/>
+            <column name="company_id" value="4"/>
+            <column name="title" value="Project Manager"/>
+            <column name="description" value=""/>
+            <column name="duration" value=""/>
+            <column name="location" value=""/>
+            <column name="knowledge_needed" value=""/>
+            <column name="experience_needed" value=""/>
+            <column name="salary" value=""/>
+            <column name="work_schedule" value=""/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="15"/>
+        </insert>
+
+        <!-- Insert program 8 -->
+        <insert tableName="program">
+            <column name="program_id" value="8"/>
+            <column name="company_id" value="2"/>
+            <column name="title" value="Trading Manager"/>
+            <column name="description" value=""/>
+            <column name="duration" value=""/>
+            <column name="location" value=""/>
+            <column name="knowledge_needed" value=""/>
+            <column name="experience_needed" value=""/>
+            <column name="salary" value=""/>
+            <column name="work_schedule" value=""/>
+            <column name="deadline" value="2023-10-09"/>
+            <column name="work_place" value="employer office"/>
+            <column name="nr_positions" value="10"/>
+            <column name="review_count" value="15"/>
+        </insert>
+
+        <!-- Insert program  -->
+<!--        <insert tableName="program">-->
+<!--            <column name="program_id" value=""/>-->
+<!--            <column name="company_id" value=""/>-->
+<!--            <column name="title" value=""/>-->
+<!--            <column name="description" value=""/>-->
+<!--            <column name="duration" value=""/>-->
+<!--            <column name="location" value=""/>-->
+<!--            <column name="knowledge_needed" value=""/>-->
+<!--            <column name="experience_needed" value=""/>-->
+<!--            <column name="salary" value=""/>-->
+<!--            <column name="work_schedule" value=""/>-->
+<!--            <column name="deadline" value="2023-10-09"/>-->
+<!--            <column name="work_place" value="employer office"/>-->
+<!--            <column name="nr_positions" value="10"/>-->
+<!--            <column name="review_count" value="15"/>-->
+<!--        </insert>-->
+
+    </changeSet>
+
+</databaseChangeLog>

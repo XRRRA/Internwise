@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.entity.Company;
+import com.example.entities.Company;
 import com.example.service.CompanyService;
 import com.example.service.response.PageableResponse;
 import org.springframework.stereotype.Controller;
@@ -35,9 +35,9 @@ public class CompanyController {
         return companyService.getCompanies(pageSize, page);
     }
 
-    @PutMapping(path="/updateCompanyById")
-    public Company updateCompanyById(Integer id) {
-        return companyService.updateCompanyById(id);
+    @PutMapping(path="/updateCompany")
+    public Company updateCompany(Company company) {
+        return companyService.updateCompany(company);
     }
 }
 //finished
