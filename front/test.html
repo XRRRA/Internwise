@@ -4,25 +4,75 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Internwise Main</title>
+<!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <!--<link href="assets/css/variables.css" rel="stylesheet"> -->
+  <link href="assets/css/variables-blue.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded ">
-        <div class="container-fluid font-weight-bold text-primary">
-          <a class="navbar-brand" href="#">Internwise</a>
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Account</a>
-              <a class="nav-link" href="#">Internships</a>    
-            </div>
-          </div>
-        </div>
-      </nav>
+    <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/LOGO.png" alt="Internwise Logo">
+        <h1>Internwise<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="index.html" class="active">Homepage</a></li>
+              <li><a href="index-2.html">Registration</a></li>
+              <li><a href="blog.html">Browse Internships</a></li>
+              <li><a href="index.html#faq">Frequent Asked Questions</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a href="blog.html">Internships</a></li>
+          <li class="dropdown megamenu"><a href="#"><span>Partners</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li>
+                <a href="https://www.amazon.com/">Amazon</a>
+                <a href="https://about.google/">Google</a>
+                <a href="https://www.warnerbros.com/">Warner Bros</a>
+              </li>
+              <li>
+                <a href="https://about.meta.com/">Meta</a>
+                <a href="http://www.disneyinternational.com/">Disney</a>
+                <a href="https://www.spacex.com/">SpaceX</a>
+              </li>
+              <li>
+                <a href="https://www.nvidia.com/en-us/">Nvidia</a>
+                <a href="https://www.oracle.com/">Oracle</a>
+                <a href="https://www.intel.com/content/www/us/en/homepage.html">intel</a>
+              </li>
+              <li>
+                <a href="https://www.apple.com/">Apple</a>
+                <a href="https://www.tesla.com/">Tesla</a>
+                <a href="https://www.microsoft.com/ro-md/">Microsoft</a>
+              </li>
+            </ul>
+          </li>
+         
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <a class="btn-getstarted scrollto" href="index-2.html">Join</a>
+
+
+    </div>
+  </header><!-- End Header -->
+
       <p style="margin-top:130px" class=" text-center fw-bold text-primary">Domain Specific Internships:</p>
     </div>
     <div class="text-center" style="margin-top:30px">
