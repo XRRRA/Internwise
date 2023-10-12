@@ -46,7 +46,7 @@
 <header id="header" class="header fixed-top" data-scrollto-offset="0">
   <div class="container-fluid d-flex align-items-center justify-content-between">
 
-    <a href="home-page.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+    <a href="homepage.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <img src="assets/img/LOGO.png" alt="Internwise Logo">
       <h1>Internwise<span>.</span></h1>
@@ -57,7 +57,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Register</h2>
-        <p>Already have an account? <a href="login-page.html">Log In</a></p>
+        <p>Already have an account? <a href="login_page.html">Log In</a></p>
       </div>
 
       <form action="" method="post" class="row g-3">
@@ -114,8 +114,8 @@
         <div class="col-lg-2 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="home-page.html">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="home-page.html#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="homepage.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="homepage.html#about">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
