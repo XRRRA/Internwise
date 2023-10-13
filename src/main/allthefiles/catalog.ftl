@@ -343,7 +343,7 @@
       </div>
 
     </div>
-
+    </div>
   </section><!-- End Blog Section -->
 
 </main><!-- End #main -->
