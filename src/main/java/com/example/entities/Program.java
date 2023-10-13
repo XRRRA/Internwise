@@ -24,6 +24,10 @@ public class Program {
     private String description;
 
     @Lob
+    @Column(name = "short_description")
+    private String shortDescription;
+
+    @Lob
     @Column(name = "duration")
     private String duration;
 
@@ -59,6 +63,9 @@ public class Program {
     @Column(name = "review_count")
     private Integer reviewCount;
 
+    @Column(name = "img_path")
+    private String imgPath;
+
     public Integer getId() {
         return id;
     }
@@ -70,7 +77,6 @@ public class Program {
     public Company getCompany() {
         return company;
     }
-
     public void setCompany(Company company) {
         this.company = company;
     }
@@ -171,4 +177,19 @@ public class Program {
         this.reviewCount = reviewCount;
     }
 
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
 }
