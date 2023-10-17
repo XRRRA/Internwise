@@ -917,6 +917,45 @@ section {
   background-color: #007bff; /* Hovered link background color */
   color: #fff; /* Hovered link text color */
 }
+/*------------------------------------------------------------
+#Section for responsibilities (internship details)
+ */
+.responsibility-list {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0;  /* Remove default padding */
+}
+
+.responsibility-list li {
+  margin-bottom: 10px; /* Add some space between list items */
+}
+
+.responsibility-list i {
+  margin-right: 10px; /* Add some space between the icon and the text */
+}
+.requirements-list, .knowledge-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.requirements-list li, .knowledge-list li {
+  margin-bottom: 10px;
+}
+
+.requirements-list i, .knowledge-list i {
+  margin-right: 10px;
+}
+.offer-list {
+  list-style: none; /* This ensures no bullet points */
+  padding-left: 0;  /* This removes any default padding */
+}
+
+.offer-list li {
+  margin-bottom: 10px;
+}
+
+.offer-list i {
+  margin-right: 10px;
+}
 
 /*--------------------------------------------------------------
 # Fullscreen Hero Section
@@ -3020,6 +3059,23 @@ section {
   background-color: rgba(var(--color-secondary-rgb), 0.8);
 }
 
+/* Updated CSS to style the stars */
+.star {
+  font-size: 24px; /* Adjust the size as needed */
+  cursor: pointer;
+}
+
+.star:hover {
+  color: gold;
+}
+
+.post-button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # Blog Home Pagination
 --------------------------------------------------------------*/

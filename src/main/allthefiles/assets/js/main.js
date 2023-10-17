@@ -1,5 +1,100 @@
+/**
+ * Validation Form when sending the CV to us
+ */
+function validateForm() {
+  let firstName = document.getElementsByName("first-name")[0].value;
+  let lastName = document.getElementsByName("last-name")[0].value;
+  let email = document.getElementsByName("email")[0].value;
+  let cv = document.getElementsByName("cv")[0].value;
+
+  let firstNameError = document.getElementById("first-name-error");
+  let lastNameError = document.getElementById("last-name-error");
+  let emailError = document.getElementById("email-error");
+  let cvError = document.getElementById("cv-error");
+
+  firstNameError.textContent = "";
+  lastNameError.textContent = "";
+  emailError.textContent = "";
+  cvError.textContent = "";
+
+  let valid = true;
+
+  if (firstName.trim() === "") {
+    firstNameError.textContent = "Please enter your First Name.";
+    valid = false;
+  }
+
+  if (lastName.trim() === "") {
+    lastNameError.textContent = "Please enter your Last Name.";
+    valid = false;
+  }
+
+  if (email.trim() === "" || !email.includes("@")) {
+    emailError.textContent = "Please enter a valid email address.";
+    valid = false;
+  }
+
+  if (cv.trim() === "") {
+    cvError.innerHTML = "Please choose a file <span style='color: red;'>!</span>";
+    valid = false;
+  }
+
+  return valid;
+}
 
 
+
+
+/**
+ * Adaugarea Tagurilor in Sectiunea Lor
+ */
+const searchInput = document.getElementById("search-input");
+const tagsList = document.getElementById("tags-list");
+
+searchInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const searchQuery = searchInput.value.trim();
+    if (searchQuery !== "") {
+      const tagItem = document.createElement("li");
+      tagItem.innerHTML = `<a href="#">${searchQuery}</a>`;
+      tagsList.appendChild(tagItem);
+      searchInput.value = ""; // Clear the input field
+    }
+  }
+});
+/**
+ * Adaugarea Tagurilor in Sectiunea Lor
+ */
+
+let currentRating = 0;
+
+function rateInternship(rating) {
+  currentRating = rating;
+  highlightStars(rating);
+  // You can send the rating to your server or perform other actions here.
+}
+
+/**
+ * Stelutele se fac galbene
+ */
+function highlightStars(rating) {
+  for (let i = 1; i <= 5; i++) {
+    const star = document.getElementById(`star${i}`);
+    if (i <= rating) {
+      star.style.color = "gold"; // Highlighted (yellow) star
+    } else {
+      star.style.color = "gray"; // Unhighlighted (gray) star
+    }
+  }
+}
+
+/**
+ * Functia review
+ */
+function postReview() {
+  // Add your code to handle the "Post" button action here.
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
@@ -67,6 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   }
+
+
+
 
   /**
    * Fires the scrollto function on click to links .scrollto
