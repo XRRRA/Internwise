@@ -41,8 +41,9 @@
                                      program_id int PRIMARY KEY,
                                      company_id int,
                                      title nvarchar(64),
+                                     short_description text,
                                      description text,
-                                     duration tinytext,
+                                     duration text,
                                      location nvarchar(64),
                                      knowledge_needed text,
                                      experience_needed text,
@@ -52,6 +53,7 @@
                                      work_place tinytext,
                                      nr_positions int,
                                      review_count int,
+                                     img_path text,
                                      FOREIGN KEY (company_id) REFERENCES company(company_id)
             );
             </sql>

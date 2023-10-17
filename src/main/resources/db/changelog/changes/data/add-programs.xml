@@ -11,17 +11,20 @@
             <column name="program_id" value="1"/>
             <column name="company_id" value="1"/>
             <column name="title" value="PM Internship"/>
-            <column name="description" value="Starting a career in IT field without a technical background? It is possible with Unifun! Unifun is"/>
+            <column name="short_description" value="Learn how to organize and manage projects!"/>
+            <column name="description" value="In this internship, you'll learn how to plan, organize, and oversee projects. It's about making sure things happen smoothly, on time, and within the budget. You'll be a key player in helping teams work together to achieve goals."/>
             <column name="duration" value="3 months"/>
             <column name="location" value="Chisinau, Botanica"/>
             <column name="knowledge_needed" value="None"/>
             <column name="experience_needed" value="None"/>
             <column name="salary" value="Unspecified"/>
             <column name="work_schedule" value="Full-time"/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-07-31"/>
             <column name="work_place" value="employer office"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="10"/>
+            <column name="review_count" value="10"/>
+            <column name="img_path" value="/assets/img/blog/amazon.jpg"/>
         </insert>
 
         <!-- Insert program 2 -->
@@ -29,17 +32,19 @@
             <column name="program_id" value="2"/>
             <column name="company_id" value="1"/>
             <column name="title" value="Linux Admin - Project Management"/>
-            <column name="description" value="О программе Это уникальная возможность для выпускников последних курсов IT-факультетов, молодых спец"/>
+            <column name="short_description" value="Manage computer systems and projects using Linux!"/>
+            <column name="description" value="In this internship, you'll learn how to handle and maintain computer systems using Linux, a powerful operating system. You'll also dive into project management, gaining skills to plan and coordinate tasks within a tech environment."/>
             <column name="duration" value="3 months"/>
             <column name="location" value="Chișinău, Botanica bd. Decebal 6"/>
             <column name="knowledge_needed" value="Any"/>
             <column name="experience_needed" value="None"/>
             <column name="salary" value="$250"/>
             <column name="work_schedule" value="Full-time"/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-03-24"/>
             <column name="work_place" value="employer office"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="13"/>
+            <column name="img_path" value="/assets/img/blog/apple.jpg"/>
         </insert>
 
         <!-- Insert program 3 -->
@@ -47,17 +52,19 @@
             <column name="program_id" value="3"/>
             <column name="company_id" value="1"/>
             <column name="title" value="1C Junior DEV"/>
-            <column name="description" value="1C Junior DEV"/>
+            <column name="short_description" value="Start coding with 1C!"/>
+            <column name="description" value="In this internship, you'll start your journey in coding using the 1C programming language. You'll learn how to write code, solve problems, and create software with the guidance of experienced developers."/>
             <column name="duration" value="3 months"/>
             <column name="location" value="Chisinau, Botanica"/>
             <column name="knowledge_needed" value="None"/>
             <column name="experience_needed" value="None"/>
             <column name="salary" value="$250"/>
             <column name="work_schedule" value="Part-Time"/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-02-04"/>
             <column name="work_place" value="employer office"/>
             <column name="nr_positions" value="14"/>
             <column name="review_count" value="20"/>
+            <column name="img_path" value="/assets/img/blog/banan.jpg"/>
         </insert>
 
         <!-- Insert program 4 -->
@@ -65,17 +72,19 @@
             <column name="program_id" value="4"/>
             <column name="company_id" value="3"/>
             <column name="title" value="Consultant impl 1C"/>
-            <column name="description" value="Specialist"/>
+            <column name="short_description" value="Help people use 1C software effectively!"/>
+            <column name="description" value="As a consultant intern, you'll learn how to assist individuals and businesses in effectively using 1C software solutions. You'll provide guidance and support to ensure they maximize the benefits of this tool."/>
             <column name="duration" value="3"/>
             <column name="location" value="ch"/>
             <column name="knowledge_needed" value="-"/>
             <column name="experience_needed" value="-"/>
             <column name="salary" value="-"/>
             <column name="work_schedule" value="-"/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-05-07"/>
             <column name="work_place" value="employer office-"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="15"/>
+            <column name="img_path" value="/assets/img/blog/disney.jpg"/>
         </insert>
 
         <!-- Insert program 5 -->
@@ -83,34 +92,38 @@
             <column name="program_id" value="5"/>
             <column name="company_id" value="3"/>
             <column name="title" value="Programmer 1C"/>
-            <column name="description" value="-"/>
+            <column name="short_description" value="Become a 1C programmer!"/>
+            <column name="description" value="As a consultant intern, you'll learn how to assist individuals and businesses in effectively using 1C software solutions. You'll provide guidance and support to ensure they maximize the benefits of this tool."/>
             <column name="duration" value="-"/>
             <column name="location" value="-"/>
             <column name="knowledge_needed" value="-"/>
             <column name="experience_needed" value="-"/>
             <column name="salary" value="-"/>
             <column name="work_schedule" value="-"/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-10-04"/>
             <column name="work_place" value="employer office-"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="15"/>
+            <column name="img_path" value="/assets/img/blog/intel.jpg"/>
         </insert>
         <!-- Insert program 6 -->
         <insert tableName="program">
             <column name="program_id" value="6"/>
             <column name="company_id" value="1"/>
             <column name="title" value="Ceva Developer"/>
-            <column name="description" value=""/>
+            <column name="short_description" value="Develop with Us!"/>
+            <column name="description" value="As a Ceva developer intern, you'll learn how to work with Ceva, a specific technology or platform. You'll create applications, enhance functionalities, and contribute to building solutions using Ceva."/>
             <column name="duration" value=""/>
             <column name="location" value=""/>
             <column name="knowledge_needed" value=""/>
             <column name="experience_needed" value=""/>
             <column name="salary" value=""/>
             <column name="work_schedule" value=""/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-08-01"/>
             <column name="work_place" value="employer office"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="15"/>
+            <column name="img_path" value="/assets/img/blog/oracle.jpg"/>
         </insert>
 
         <!-- Insert program 7 -->
@@ -118,17 +131,19 @@
             <column name="program_id" value="7"/>
             <column name="company_id" value="4"/>
             <column name="title" value="Project Manager"/>
-            <column name="description" value=""/>
+            <column name="short_description" value="Lead projects and teams!"/>
+            <column name="description" value="In this internship, you'll learn the art of project management—how to lead teams, plan tasks, and oversee projects from start to finish. You'll be the one ensuring everyone stays on track to achieve their goals."/>
             <column name="duration" value=""/>
             <column name="location" value=""/>
             <column name="knowledge_needed" value=""/>
             <column name="experience_needed" value=""/>
             <column name="salary" value=""/>
             <column name="work_schedule" value=""/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-09-09"/>
             <column name="work_place" value="employer office"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="15"/>
+            <column name="img_path" value="/assets/img/blog/spacex.jpg"/>
         </insert>
 
         <!-- Insert program 8 -->
@@ -136,17 +151,19 @@
             <column name="program_id" value="8"/>
             <column name="company_id" value="2"/>
             <column name="title" value="Trading Manager"/>
-            <column name="description" value=""/>
+            <column name="short_description" value="Manage trades and deals!"/>
+            <column name="description" value="In this internship, you'll learn about managing trades and deals in the business world. You'll understand how to analyze markets, negotiate contracts, and make decisions that help businesses succeed in the trading environment."/>
             <column name="duration" value=""/>
             <column name="location" value=""/>
             <column name="knowledge_needed" value=""/>
             <column name="experience_needed" value=""/>
             <column name="salary" value=""/>
             <column name="work_schedule" value=""/>
-            <column name="deadline" value="2023-10-09"/>
+            <column name="deadline" value="2023-10-20"/>
             <column name="work_place" value="employer office"/>
             <column name="nr_positions" value="10"/>
             <column name="review_count" value="15"/>
+            <column name="img_path" value="/assets/img/blog/warnerbros.jpg"/>
         </insert>
 
         <!-- Insert program  -->

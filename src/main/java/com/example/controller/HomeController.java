@@ -27,10 +27,10 @@ public class HomeController {
         this.userService = userService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String getCompanies(Model model) {
-        PageableResponse<Company> companies = companyService.getCompanies(10, 0);
-        model.addAttribute("listOfCompanies", companies);
-        return "home-page";
+        model.addAttribute("pageTitle", "Home Page");
+        model.addAttribute("pageContent", "home-page-body");
+        return "layout";
     }
 }
