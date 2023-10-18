@@ -311,35 +311,26 @@ function validateForm() {
   let emailError = document.getElementById("email-error");
   let cvError = document.getElementById("cv-error");
 
-  firstNameError.textContent = "";
-  lastNameError.textContent = "";
-  emailError.textContent = "";
-  cvError.textContent = "";
+  firstNameError.textContent = validateField(firstName, "First Name");
+  lastNameError.textContent = validateField(lastName, "Last Name");
+  emailError.textContent = validateField(email, "Email");
+  cvError.textContent = validateField(cv, "CV");
 
-  let valid = true;
-
-  if (firstName.trim() === "") {
-    firstNameError.textContent = "Please enter your First Name.";
-    valid = false;
+  // Check if any error messages are present
+  if (firstNameError.textContent || lastNameError.textContent || emailError.textContent || cvError.textContent) {
+    return false; // Form submission is prevented
   }
 
-  if (lastName.trim() === "") {
-    lastNameError.textContent = "Please enter your Last Name.";
-    valid = false;
-  }
-
-  if (email.trim() === "" || !email.includes("@")) {
-    emailError.textContent = "Please enter a valid email address.";
-    valid = false;
-  }
-
-  if (cv.trim() === "") {
-    cvError.innerHTML = "Please choose a file <span style='color: red;'>!</span>";
-    valid = false;
-  }
-
-  return valid;
+  return true; // Form submission is allowed
 }
+
+function validateField(value, fieldName) {
+  if (value.trim() === "") {
+    return `Please enter your ${fieldName}.`;
+  }
+  return "";
+}
+
 
 
 
@@ -394,3 +385,8 @@ function highlightStars(rating) {
 function postReview() {
   // Add your code to handle the "Post" button action here.
 }
+
+
+/**
+ * Functia pentru cv form
+ */
