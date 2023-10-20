@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+}
+.search-bar {
+    background-color: #B0E3FD;
+    border-radius: 15px;
+    height: 58px;
+    width: 670px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+.centered-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
