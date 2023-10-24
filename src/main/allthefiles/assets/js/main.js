@@ -295,6 +295,36 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+
+  var updatedProfilePhotoElement = document.querySelector('.profile-photo');
+  if (updatedProfilePhotoElement) {
+    updatedProfilePhotoElement.addEventListener('click', handleDropdownToggle);
+
+    window.addEventListener('click', function(event) {
+      if (!event.target.matches('.profile-photo')) {
+        closeAllDropdowns();
+      }
+    });
+  }
+
+  function handleDropdownToggle() {
+    var updatedDropdownContent = document.querySelector('.profile-dropdown-content');
+    if (updatedDropdownContent.classList.contains('show')) {
+      updatedDropdownContent.classList.remove('show');
+    } else {
+      updatedDropdownContent.classList.add('show');
+    }
+  }
+
+  function closeAllDropdowns() {
+    var updatedDropdownContents = document.querySelectorAll('.profile-dropdown-content');
+    updatedDropdownContents.forEach(function(dropdown) {
+      dropdown.classList.remove('show');
+    });
+  }
+
+
+
 });
 
 /**
@@ -388,5 +418,7 @@ function postReview() {
 
 
 /**
- * Functia pentru cv form
+ * User profile circle
  */
+
+
