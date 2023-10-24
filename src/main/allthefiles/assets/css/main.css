@@ -3333,3 +3333,22 @@ section {
 .profile-dropdown-content.show {
   display: block;
 }
+
+
+
+/* Admin Dashboard buttons style for mobile navigation */
+@media only screen and (max-width: 768px) {
+  .admin-dashboard-buttons {
+    flex-direction: column;
+  }
+
+  .admin-dashboard-buttons .btn {
+    margin: 5px 0;
+    width: 100%;
+  }
+}
+
+
+
+
+
