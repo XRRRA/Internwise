@@ -244,6 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
   /**
    * Testimonials Slider
    */
@@ -419,10 +420,22 @@ function postReview() {
   // Add your code to handle the "Post" button action here.
 }
 
-
 /**
- * User profile circle
+ * Admin Dashboard Table
  */
+function toggleStudentsTable() {
+  var img = document.querySelector("#hero-animated img");
+  var table = document.getElementById("studentsTable");
+
+  if (table.style.display === "none") {
+    img.style.display = "none";
+    table.style.display = "table";
+  } else {
+    img.style.display = "block";
+    table.style.display = "none";
+  }
+}
+
 
 
 
