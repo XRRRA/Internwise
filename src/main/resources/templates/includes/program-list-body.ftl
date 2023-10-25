@@ -7,7 +7,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h2>Available Internships</h2>
                 <ol>
-                    <li><a href="home-page.html">Homepage</a></li>
+                    <li><a href="/home">Homepage</a></li>
                     <li>Internships</li>
                 </ol>
             </div>
@@ -31,8 +31,8 @@
 
                     <div class="blog-pagination">
                         <ul class="justify-content-center">
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                         </ul>
                     </div><!-- End blog pagination -->

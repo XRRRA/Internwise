@@ -6,183 +6,59 @@
     <!-- ChangeSet for adding users -->
     <changeSet author="your_author" id="unique-id-for-adding-users" labels="version-0.0.1">
 
-        <!-- Insert program 1 -->
-        <insert tableName="program">
-            <column name="program_id" value="1"/>
-            <column name="company_id" value="1"/>
-            <column name="title" value="PM Internship"/>
-            <column name="short_description" value="Learn how to organize and manage projects!"/>
-            <column name="description" value="In this internship, you'll learn how to plan, organize, and oversee projects. It's about making sure things happen smoothly, on time, and within the budget. You'll be a key player in helping teams work together to achieve goals."/>
-            <column name="duration" value="3 months"/>
-            <column name="location" value="Chisinau, Botanica"/>
-            <column name="knowledge_needed" value="None"/>
-            <column name="experience_needed" value="None"/>
-            <column name="salary" value="Unspecified"/>
-            <column name="work_schedule" value="Full-time"/>
-            <column name="deadline" value="2023-07-31"/>
-            <column name="work_place" value="employer office"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="10"/>
-            <column name="review_count" value="10"/>
-            <column name="img_path" value="/assets/img/blog/amazon.jpg"/>
-        </insert>
-
-        <!-- Insert program 2 -->
-        <insert tableName="program">
-            <column name="program_id" value="2"/>
-            <column name="company_id" value="1"/>
-            <column name="title" value="Linux Admin - Project Management"/>
-            <column name="short_description" value="Manage computer systems and projects using Linux!"/>
-            <column name="description" value="In this internship, you'll learn how to handle and maintain computer systems using Linux, a powerful operating system. You'll also dive into project management, gaining skills to plan and coordinate tasks within a tech environment."/>
-            <column name="duration" value="3 months"/>
-            <column name="location" value="Chișinău, Botanica bd. Decebal 6"/>
-            <column name="knowledge_needed" value="Any"/>
-            <column name="experience_needed" value="None"/>
-            <column name="salary" value="$250"/>
-            <column name="work_schedule" value="Full-time"/>
-            <column name="deadline" value="2023-03-24"/>
-            <column name="work_place" value="employer office"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="13"/>
-            <column name="img_path" value="/assets/img/blog/apple.jpg"/>
-        </insert>
-
-        <!-- Insert program 3 -->
-        <insert tableName="program">
-            <column name="program_id" value="3"/>
-            <column name="company_id" value="1"/>
-            <column name="title" value="1C Junior DEV"/>
-            <column name="short_description" value="Start coding with 1C!"/>
-            <column name="description" value="In this internship, you'll start your journey in coding using the 1C programming language. You'll learn how to write code, solve problems, and create software with the guidance of experienced developers."/>
-            <column name="duration" value="3 months"/>
-            <column name="location" value="Chisinau, Botanica"/>
-            <column name="knowledge_needed" value="None"/>
-            <column name="experience_needed" value="None"/>
-            <column name="salary" value="$250"/>
-            <column name="work_schedule" value="Part-Time"/>
-            <column name="deadline" value="2023-02-04"/>
-            <column name="work_place" value="employer office"/>
-            <column name="nr_positions" value="14"/>
-            <column name="review_count" value="20"/>
-            <column name="img_path" value="/assets/img/blog/banan.jpg"/>
-        </insert>
-
-        <!-- Insert program 4 -->
-        <insert tableName="program">
-            <column name="program_id" value="4"/>
-            <column name="company_id" value="3"/>
-            <column name="title" value="Consultant impl 1C"/>
-            <column name="short_description" value="Help people use 1C software effectively!"/>
-            <column name="description" value="As a consultant intern, you'll learn how to assist individuals and businesses in effectively using 1C software solutions. You'll provide guidance and support to ensure they maximize the benefits of this tool."/>
-            <column name="duration" value="3"/>
-            <column name="location" value="ch"/>
-            <column name="knowledge_needed" value="-"/>
-            <column name="experience_needed" value="-"/>
-            <column name="salary" value="-"/>
-            <column name="work_schedule" value="-"/>
-            <column name="deadline" value="2023-05-07"/>
-            <column name="work_place" value="employer office-"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="15"/>
-            <column name="img_path" value="/assets/img/blog/disney.jpg"/>
-        </insert>
-
-        <!-- Insert program 5 -->
-        <insert tableName="program">
-            <column name="program_id" value="5"/>
-            <column name="company_id" value="3"/>
-            <column name="title" value="Programmer 1C"/>
-            <column name="short_description" value="Become a 1C programmer!"/>
-            <column name="description" value="As a consultant intern, you'll learn how to assist individuals and businesses in effectively using 1C software solutions. You'll provide guidance and support to ensure they maximize the benefits of this tool."/>
-            <column name="duration" value="-"/>
-            <column name="location" value="-"/>
-            <column name="knowledge_needed" value="-"/>
-            <column name="experience_needed" value="-"/>
-            <column name="salary" value="-"/>
-            <column name="work_schedule" value="-"/>
-            <column name="deadline" value="2023-10-04"/>
-            <column name="work_place" value="employer office-"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="15"/>
-            <column name="img_path" value="/assets/img/blog/intel.jpg"/>
-        </insert>
-        <!-- Insert program 6 -->
-        <insert tableName="program">
-            <column name="program_id" value="6"/>
-            <column name="company_id" value="1"/>
-            <column name="title" value="Ceva Developer"/>
-            <column name="short_description" value="Develop with Us!"/>
-            <column name="description" value="As a Ceva developer intern, you'll learn how to work with Ceva, a specific technology or platform. You'll create applications, enhance functionalities, and contribute to building solutions using Ceva."/>
-            <column name="duration" value=""/>
-            <column name="location" value=""/>
-            <column name="knowledge_needed" value=""/>
-            <column name="experience_needed" value=""/>
-            <column name="salary" value=""/>
-            <column name="work_schedule" value=""/>
-            <column name="deadline" value="2023-08-01"/>
-            <column name="work_place" value="employer office"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="15"/>
-            <column name="img_path" value="/assets/img/blog/oracle.jpg"/>
-        </insert>
-
-        <!-- Insert program 7 -->
-        <insert tableName="program">
-            <column name="program_id" value="7"/>
-            <column name="company_id" value="4"/>
-            <column name="title" value="Project Manager"/>
-            <column name="short_description" value="Lead projects and teams!"/>
-            <column name="description" value="In this internship, you'll learn the art of project management—how to lead teams, plan tasks, and oversee projects from start to finish. You'll be the one ensuring everyone stays on track to achieve their goals."/>
-            <column name="duration" value=""/>
-            <column name="location" value=""/>
-            <column name="knowledge_needed" value=""/>
-            <column name="experience_needed" value=""/>
-            <column name="salary" value=""/>
-            <column name="work_schedule" value=""/>
-            <column name="deadline" value="2023-09-09"/>
-            <column name="work_place" value="employer office"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="15"/>
-            <column name="img_path" value="/assets/img/blog/spacex.jpg"/>
-        </insert>
-
-        <!-- Insert program 8 -->
-        <insert tableName="program">
-            <column name="program_id" value="8"/>
-            <column name="company_id" value="2"/>
-            <column name="title" value="Trading Manager"/>
-            <column name="short_description" value="Manage trades and deals!"/>
-            <column name="description" value="In this internship, you'll learn about managing trades and deals in the business world. You'll understand how to analyze markets, negotiate contracts, and make decisions that help businesses succeed in the trading environment."/>
-            <column name="duration" value=""/>
-            <column name="location" value=""/>
-            <column name="knowledge_needed" value=""/>
-            <column name="experience_needed" value=""/>
-            <column name="salary" value=""/>
-            <column name="work_schedule" value=""/>
-            <column name="deadline" value="2023-10-20"/>
-            <column name="work_place" value="employer office"/>
-            <column name="nr_positions" value="10"/>
-            <column name="review_count" value="15"/>
-            <column name="img_path" value="/assets/img/blog/warnerbros.jpg"/>
-        </insert>
-
-        <!-- Insert program  -->
-<!--        <insert tableName="program">-->
-<!--            <column name="program_id" value=""/>-->
-<!--            <column name="company_id" value=""/>-->
-<!--            <column name="title" value=""/>-->
-<!--            <column name="description" value=""/>-->
-<!--            <column name="duration" value=""/>-->
-<!--            <column name="location" value=""/>-->
-<!--            <column name="knowledge_needed" value=""/>-->
-<!--            <column name="experience_needed" value=""/>-->
-<!--            <column name="salary" value=""/>-->
-<!--            <column name="work_schedule" value=""/>-->
-<!--            <column name="deadline" value="2023-10-09"/>-->
-<!--            <column name="work_place" value="employer office"/>-->
-<!--            <column name="nr_positions" value="10"/>-->
-<!--            <column name="review_count" value="15"/>-->
-<!--        </insert>-->
+        <sql>
+            INSERT INTO program (program_id, company_id, title, short_description, description, responsibilities, offers, knowledge_needed, experience_needed, work_schedule, requirements, duration, location, work_place, nr_positions, salary, deadline, review_count, img_path, program_url_path)
+            VALUES
+                (1, 1, "Software Developer Intern", "Build amazing software!", "Join us as a Software Developer Intern and embark on a journey to learn the art of developing cutting-edge software. You'll write code, build applications, and contribute to exciting projects, all while working alongside experienced developers. This internship is an excellent opportunity to jumpstart your career in software development and gain hands-on experience in the field.", "As a Software Developer Intern, your responsibilities will include: Writing code and developing software applications. Collaborating with experienced developers to learn best practices. Contributing to exciting and innovative projects. Gaining hands-on experience in the field.\n\n","We offer: Competitive compensation for your valuable contributions. The opportunity to work in a dynamic and collaborative environment.", "No specific knowledge required", "No experience required, but a strong desire to learn", "Full-time position, Monday to Friday", "Solid problem-solving skills, excellent teamwork", "3 months", "New York", "Office", 5, "Paid internship with competitive compensation", "2023-11-15", 10, "/assets/img/blog/amazon.jpg", "software-dev-intern"),
+                (2, 2, "Trading Manager Intern", "Manage business deals!", "Become a Trading Manager Intern and dive into the world of business deals and trades. In this role, you'll analyze markets, negotiate contracts, and make decisions that directly impact business success. If you're a problem solver with a keen interest in the trading environment, this internship is your stepping stone to a dynamic career.", "As a Trading Manager Intern, your responsibilities will include:\n
+            - Analyzing market trends and data.
+            - Negotiating contracts and making strategic decisions.
+            - Directly impacting business success.
+            - Working in a part-time schedule with flexible hours.\n\n","We offer:\n
+            - Stipend for your valuable contributions.
+            - The opportunity to work in a dynamic and collaborative environment.","No specific knowledge required", "No experience required, but a strong desire to learn", "Part-time schedule, flexible hours", "Strong analytical skills, excellent communication", "2 months", "London", "Office", 10, "Stipend for your valuable contributions", "2023-10-30", 15, "/assets/img/blog/amazon.jpg", "trading-manager-intern"),
+                (3, 3, "Network Administrator Intern", "Maintain computer networks!", "As a Network Administrator Intern, you'll be responsible for maintaining and configuring computer networks. This internship covers network administration, troubleshooting, and network security. Gain real-world experience and develop your technical skills in a supportive environment.", "As a Network Administrator Intern, your responsibilities will include:\n
+            - Maintaining and configuring computer networks.
+            - Troubleshooting network issues.
+            - Ensuring network security.
+            - Working in a full-time position from Monday to Friday.\n\n","We offer:\n
+            - Competitive compensation package.
+            - The opportunity to work in a dynamic and collaborative environment.","No specific knowledge required", "Some technical background is preferred", "Full-time position, Monday to Friday", "Strong problem-solving skills, excellent attention to detail", "6 months", "Los Angeles", "Office", 3, "Competitive compensation package", "2023-11-25", 8, "/assets/img/blog/apple.jpg", "network-admin-intern"),
+                (4, 4, "Web Designer Intern", "Design stunning websites!", "Step into the world of Web Design as an intern. Learn about web design, user interface, and create visually appealing websites. Whether you're a creative mind or just starting out, this internship offers the opportunity to work on exciting design projects and hone your design skills.", "As a Web Designer Intern, your responsibilities will include:\n
+            - Designing and creating visually appealing websites and user interfaces.\n\n","We offer:\n
+            - Stipend for your valuable contributions.
+            - The opportunity to work in a dynamic and collaborative environment.", "No specific knowledge required", "No experience required, but a strong passion for design", "Part-time schedule, flexible hours", "Creative design thinking, excellent attention to detail", "4 months", "San Francisco", "Office", 8, "Stipend for your valuable contributions", "2023-11-10", 12, "/assets/img/blog/banan.jpg", "web-designer-intern"),
+                (5, 5, "Data Analyst Intern", "Analyze data like a pro!", "This Data Analyst Internship is all about working with data, performing analysis, and helping businesses make data-driven decisions. Dive into data science, enhance your analytical skills, and contribute to real-world projects that make an impact.", "As a Data Analyst Intern, your responsibilities will include:\n
+            - Analyzing data and performing data-driven decision-making.
+            - Participating in a full-time position from Monday to Friday.\n\n","We offer:\n
+            - Paid internship with competitive compensation.
+            - The opportunity to work in a dynamic and collaborative environment.", "No specific knowledge required","Some analytical skills or coursework is preferred", "Full-time position, Monday to Friday", "Strong analytical skills, excellent attention to detail", "5 months", "Chicago", "Office", 4, "Paid internship with competitive compensation", "2023-12-05", 7, "/assets/img/blog/recentposts4.jpg", "data-analyst-intern"),
+                (6, 6, "Cybersecurity Intern", "Protect against cyber threats!", "Become a Cybersecurity Intern and focus on protecting against cyber threats. Learn about cybersecurity basics, secure computer systems and networks, and explore the world of digital security. If you're passionate about digital security and want hands-on experience, this internship is your gateway.", "As a Cybersecurity Intern, your responsibilities will include:\n
+            - Learning and implementing cybersecurity measures to protect computer systems.
+            - Working in a part-time schedule with flexible hours.\n\n","We offer:\n
+            - Stipend for your valuable contributions.
+            - The opportunity to work in a dynamic and collaborative environment.","No specific knowledge required", "No experience required, but a strong desire to learn", "Part-time schedule, flexible hours", "Passion for cybersecurity, excellent problem-solving skills", "3 months", "Boston", "Office", 6, "Stipend for your valuable contributions", "2023-10-31", 9, "/assets/img/blog/recentposts1.jpg", "cybersecurity-intern"),
+                (7, 1, "Software Tester Intern", "Test software for bugs!", "This internship is all about testing software applications for bugs and issues. Join us as a Software Tester Intern, learn quality assurance, and help improve software quality. It's a great opportunity to gain real-world testing experience and contribute to the software development process.", "As a Software Tester Intern, your responsibilities will include:\n
+            - Testing and identifying software bugs to ensure software quality.
+            - Participating in a full-time position from Monday to Friday.\n\n","We offer:\n
+            - Paid internship with competitive compensation.
+            - The opportunity to work in a dynamic and collaborative environment.", "No specific knowledge required", "No experience required, but a strong desire to learn", "Full-time position, Monday to Friday", "Strong attention to detail, excellent problem-solving skills", "4 months", "New York", "Office", 7, "Paid internship with competitive compensation", "2023-11-20", 11, "/assets/img/blog/recentposts2.jpg", "software-tester-intern"),
+                (8, 2, "Financial Analyst Intern", "Analyze financial data!", "Analyze financial data, prepare reports, and assist in making financial decisions for businesses as a Financial Analyst Intern. Whether you have some financial knowledge or are looking to develop it, this internship provides valuable experience and the opportunity to work on financial projects.", "As a Financial Analyst Intern, your responsibilities will include:\n
+            - Analyzing financial data and preparing reports.
+            - Participating in a part-time schedule with flexible hours.\n\n","We offer:\n
+            - Stipend for your valuable contributions.
+            - The opportunity to work in a dynamic and collaborative environment.", "No specific knowledge required","Some financial knowledge is preferred", "Part-time schedule, flexible hours", "Strong analytical and problem-solving skills", "6 months", "London", "Office", 5, "Stipend for your valuable contributions", "2023-11-30", 10, "/assets/img/blog/warnerbros.jpg", "financial-analyst-intern"),
+                (9, 3, "Database Administrator Intern", "Manage databases effectively!", "Join us as a Database Administrator Intern and learn to manage and maintain databases. This internship covers database design, SQL, and data management. Whether you're just starting out or have some database basics, you'll gain valuable experience.", "As a Database Administrator Intern, your responsibilities will include:\n
+            - Managing and maintaining databases, assisting in database design and data management.
+            - Participating in a full-time position from Monday to Friday.\n\n","We offer:\n
+            - Paid internship with competitive compensation.
+            - The opportunity to work in a dynamic and collaborative environment.", "No specific knowledge required","No experience required, but a strong desire to learn", "Full-time position, Monday to Friday", "Strong database management and data skills", "3 months", "Los Angeles", "Office", 4, "Paid internship with competitive compensation", "2023-12-10", 8, "/assets/img/blog/banan.jpg", "database-admin-intern"),
+                (10, 4, "UX/UI Designer Intern", "Design user-friendly interfaces!", "Join our team as a UX/UI Designer Intern and create user-friendly interfaces and experiences for web and mobile apps. This internship focuses on designing intuitive and attractive interfaces. Whether you're a design enthusiast or looking to enhance your design skills, this internship offers exciting design projects.", "As a UX/UI Designer Intern, your responsibilities will include:\n
+            - Designing user-friendly interfaces for web and mobile apps.
+            - Participating in a part-time schedule with flexible hours.\n\n","We offer:\n
+            - Stipend for your valuable contributions.
+            - The opportunity to work in a dynamic and collaborative environment.","No specific knowledge required", "No experience required, but a strong passion for design", "Part-time schedule, flexible hours", "Creative design thinking and user-centric design approach", "5 months", "San Francisco", "Office", 6, "Stipend for your valuable contributions", "2023-12-15", 9, "/assets/img/blog/disney.jpg", "ux-ui-designer-intern");
+        </sql>
 
     </changeSet>
 

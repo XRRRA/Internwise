@@ -4,7 +4,10 @@ import com.example.entities.Program;
 import com.example.service.ProgramService;
 import com.example.service.response.PageableResponse;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/programs")
@@ -32,5 +35,15 @@ public class ProgramController {
     @PutMapping(path="/updateProgramById")
     public Program updateProgramById(Program program){
         return programService.updateProgramById(program);
+    }
+    @GetMapping(value = {"/{companyUrlPath}/{programUrlPath}"})
+    public String getProductDetailedPage(@PathVariable String companyUrlPath, @PathVariable String programUrlPath, ModelMap model) {
+        String urlPat = "/"+companyUrlPath+"/"+programUrlPath;
+        Program program  = programService.getProgramsByProgramUrlPath(urlPat);
+
+        model.addAttribute("program", program);
+        model.addAttribute("pageContent", "internships_details");
+        model.addAttribute("pageTitle", "Internship description");
+        return "layout";
     }
 }

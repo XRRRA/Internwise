@@ -4,7 +4,10 @@ import com.example.entities.Application;
 import com.example.service.ApplicationService;
 import com.example.service.response.PageableResponse;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/applications")

@@ -2,8 +2,6 @@ package com.example.entities;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "company", schema = "new_version")
 public class Company {
@@ -24,15 +22,21 @@ public class Company {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "contacts", length = 24)
+    @Lob
+    @Column(name = "contacts")
     private String contacts;
 
     @Lob
     @Column(name = "socials")
     private String socials;
 
-    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
-    private List<Program> programs;
+    @Lob
+    @Column(name = "company_url_path")
+    private String companyUrlPath;
+
+    @Lob
+    @Column(name = "company_img_path")
+    private String companyImgPath;
 
     public Integer getId() {
         return id;
@@ -90,11 +94,20 @@ public class Company {
         this.socials = socials;
     }
 
-    public List<Program> getPrograms() {
-        return programs;
+    public String getCompanyUrlPath() {
+        return companyUrlPath;
     }
 
-    public void setPrograms(List<Program> programs) {
-        this.programs = programs;
+    public void setCompanyUrlPath(String companyUrlPath) {
+        this.companyUrlPath = companyUrlPath;
     }
+
+    public String getCompanyImgPath() {
+        return companyImgPath;
+    }
+
+    public void setCompanyImgPath(String companyImgPath) {
+        this.companyImgPath = companyImgPath;
+    }
+
 }

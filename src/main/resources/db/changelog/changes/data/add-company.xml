@@ -6,71 +6,16 @@
     <!-- ChangeSet for adding users -->
     <changeSet author="your_author" id="unique-id-for-adding-users" labels="version-0.0.1">
 
-        <!-- Insert Company 1 -->
-        <insert tableName="company">
-            <column name="company_id" value="1"/>
-            <column name="company_name" value="Unifun"/>
-            <column name="industry" value="IT"/>
-            <column name="website" value="www.unifun.com"/>
-            <column name="description" value="Compania „Unifun” este specializată în dezvoltarea de produse IT pentru operatorii de telefonie"/>
-            <column name="contacts" value="-"/>
-            <column name="socials" value="-"/>
-        </insert>
-
-        <!-- Insert Company 2 -->
-        <insert tableName="company">
-            <column name="company_id" value="2"/>
-            <column name="company_name" value="DoubleCase"/>
-            <column name="industry" value="Trading"/>
-            <column name="website" value="-"/>
-            <column name="description" value="Double Case - успешное торговое сообщество, осуществляющее свою деятельность в Республике Молдова"/>
-            <column name="contacts" value="-"/>
-            <column name="socials" value="-"/>
-        </insert>
-
-        <!-- Insert Company 3 -->
-        <insert tableName="company">
-            <column name="company_id" value="3"/>
-            <column name="company_name" value="Business Logic"/>
-            <column name="industry" value="IT"/>
-            <column name="website" value="-"/>
-            <column name="description" value="Noi dezvoltăm și implementăm produse software pe baza platformei 1C"/>
-            <column name="contacts" value="-"/>
-            <column name="socials" value="-"/>
-        </insert>
-
-        <!-- Insert Company 4 -->
-        <insert tableName="company">
-            <column name="company_id" value="4"/>
-            <column name="company_name" value="Jivy Group"/>
-            <column name="industry" value="IT"/>
-            <column name="website" value="-"/>
-            <column name="description" value="JIVY GROUP is a mid-size international software engineering company headquartered in Chisinau."/>
-            <column name="contacts" value="-"/>
-            <column name="socials" value="-"/>
-        </insert>
-
-        <!-- Insert Company 5 -->
-        <insert tableName="company">
-            <column name="company_id" value="5"/>
-            <column name="company_name" value="Pentalog"/>
-            <column name="industry" value="IT"/>
-            <column name="website" value="-"/>
-            <column name="description" value="-"/>
-            <column name="contacts" value="-"/>
-            <column name="socials" value="-"/>
-        </insert>
-
-        <!-- Insert Company  -->
-<!--        <insert tableName="company">-->
-<!--            <column name="company_id" value=""/>-->
-<!--            <column name="company_name" value=""/>-->
-<!--            <column name="industry" value=""/>-->
-<!--            <column name="website" value=""/>-->
-<!--            <column name="description" value=""/>-->
-<!--            <column name="contacts" value=""/>-->
-<!--            <column name="socials" value=""/>-->
-<!--        </insert>-->
+        <sql>
+            INSERT INTO company (company_id, company_name, industry, website, description, contacts, socials, company_url_path, company_img_path)
+            VALUES
+                (1, "Google", "Technology", "https://www.google.com", "Google is a multinational technology company that specializes in Internet-related services and products. It is known for its search engine, online advertising technologies, cloud computing, software, and hardware.", "https://support.google.com", "Follow Google on Twitter, Facebook, and LinkedIn", "google", "/assets/img/clients/google.png"),
+                (2, "Apple Inc.", "Technology", "https://www.apple.com", "Apple Inc. is an American multinational technology company that designs, manufactures, and markets consumer electronics, software, and services. It's known for products like the iPhone, Mac, and iPad.", "https://www.apple.com", "Connect with Apple on Twitter, Facebook, and LinkedIn", "apple","/assets/img/clients/apple.png"),
+                (3, "Microsoft", "Technology", "https://www.microsoft.com", "Microsoft is a global technology company that develops, licenses, and sells computer software, consumer electronics, and personal computers. It's known for Windows, Office, and Azure.", "https://support.microsoft.com", "Join Microsoft on Twitter, Facebook, and LinkedIn", "microsoft","/assets/img/clients/microsoft.png"),
+                (4, "Amazon", "Technology", "https://www.amazon.com", "Amazon is a multinational technology and e-commerce company. It is the world's largest online sales platform and a leading cloud computing provider through Amazon Web Services.", "https://www.amazon.com", "Follow Amazon on Twitter, Facebook, and LinkedIn", "amazon", "/assets/img/clients/amazon.png"),
+                (5, "Meta", "Technology", "https://www.facebook.com", "Facebook is a social media and technology company. It's known for its social networking platform and services like Instagram, WhatsApp, and Oculus VR.", "https://www.facebook.com", "Connect with Facebook on Twitter, Instagram, and LinkedIn", "facebook","/assets/img/clients/meta.png"),
+                (6, "Oracle Corporation", "Technology", "https://www.oracle.com", "Oracle Corporation is a global technology company that specializes in database software, cloud computing, and enterprise software. It provides database solutions and cloud services.", "https://www.oracle.com", "Join Oracle on Twitter, Facebook, and LinkedIn", "oracle","/assets/img/clients/Oracle-logo.png");
+        </sql>
 
     </changeSet>
 

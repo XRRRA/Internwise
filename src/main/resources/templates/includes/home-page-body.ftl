@@ -4,7 +4,7 @@
         <h2>Welcome to <span>Internwise</span></h2>
         <p>Unlock your future with our platform, connecting students to prestigious internships at top-tier companies for unparalleled career opportunities!</p>
         <div class="d-flex">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="http://localhost:8080/home#about" class="btn-get-started scrollto">Get Started</a>
             <a href="https://www.youtube.com/watch?v=TEDR6Jg2Pls&ab_channel=kentuckianaworks" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
         </div>
     </div>

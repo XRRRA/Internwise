@@ -48,4 +48,10 @@ public class ProgramServiceImpl implements ProgramService {
     public Program updateProgramById(Program program) {
         return programRepository.save(program);
     }
+
+    @Override
+    public Program getProgramsByProgramUrlPath(String programUrlPath) {
+        return programRepository.getProgramByUrlPath(programUrlPath);
+    }
+
 }

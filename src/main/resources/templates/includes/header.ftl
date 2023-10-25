@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <a href="home" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <a href="/home" class="logo d-flex align-items-center scroll to me-auto me-lg-0">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="/assets/img/LOGO.png" alt="Internwise Logo">
             <h1>Internwise<span>.</span></h1>
@@ -10,16 +10,18 @@
         <nav id="navbar" class="navbar">
             <ul>
 
-                <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <li class="dropdown"><a href="/home"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="home" class="active">Homepage</a></li>
-                        <li><a href="registration-page.html">Registration</a></li>
-                        <li><a href="programs">Browse Internships</a></li>
-                        <li><a href="home#faq">Frequently Asked Questions</a></li>
+                        <li><a href="/home" class="active">Homepage</a></li>
+                        <li><a href="registration_page.html">Registration</a></li>
+                        <li><a href="/home#faq">Frequently Asked Questions</a></li>
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto" href="home#about">About</a></li>
+                <li><a class="nav-link scrollto" href="/home#about">About</a></li>
+                <li><a class="nav-link scrollto" href="/home#featured-services">Services</a></li>
+                <li><a class="nav-link scrollto" href="/home">Create your CV</a></li>
+                <li><a class="nav-link scrollto" href="/home#contact">Contact</a></li>
                 <li><a href="/programs">Internships</a></li>
                 <li class="dropdown megamenu"><a href="#"><span>Partners</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
@@ -45,29 +47,11 @@
                         </li>
                     </ul>
                 </li>
-                <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                  <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                      <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Drop Down 2</a></li>
-                    <li><a href="#">Drop Down 3</a></li>
-                    <li><a href="#">Drop Down 4</a></li>
-                  </ul>
-                </li> -->
-                <li><a class="nav-link scrollto" href="home#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->
 
-        <a class="btn-getstarted scrollto" href="registration-page.html">Join</a>
+        <a class="btn-getstarted scrollto" href="registration_page.html">Join</a>
 
 
     </div>

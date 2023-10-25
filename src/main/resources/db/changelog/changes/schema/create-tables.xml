@@ -29,7 +29,9 @@
                                      website nvarchar(64),
                                      description text,
                                      contacts text,
-                                     socials text
+                                     socials text,
+                                     company_url_path text,
+                                     company_img_path text
             );
             </sql>
     </changeSet>
@@ -41,19 +43,27 @@
                                      program_id int PRIMARY KEY,
                                      company_id int,
                                      title nvarchar(64),
+--                                      descriptions
                                      short_description text,
                                      description text,
-                                     duration text,
-                                     location nvarchar(64),
+                                     responsibilities text,
+                                     offers text,
+--                                      requirements
                                      knowledge_needed text,
                                      experience_needed text,
-                                     salary tinytext,
-                                     work_schedule tinytext,
-                                     deadline date,
-                                     work_place tinytext,
+                                     work_schedule text,
+                                     requirements text,
+--                                      need to know
+                                     duration text,
+                                     location text,
+                                     work_place text,
                                      nr_positions int,
+                                     salary text,
+--                                      other
+                                     deadline date,
                                      review_count int,
                                      img_path text,
+                                     program_url_path text,
                                      FOREIGN KEY (company_id) REFERENCES company(company_id)
             );
             </sql>

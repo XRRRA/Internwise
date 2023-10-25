@@ -9,4 +9,6 @@ public interface ProgramService {
     boolean removeProgramById(Integer id);
     PageableResponse<Program> getPrograms(Integer pageSize, Integer page);
     Program updateProgramById(Program program);
+
+    Program getProgramsByProgramUrlPath(String programUrlPath);
 }

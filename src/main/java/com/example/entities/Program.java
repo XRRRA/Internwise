@@ -11,6 +11,8 @@ public class Program {
     @Column(name = "program_id", nullable = false)
     private Integer id;
 
+    private String urlPath;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
@@ -20,19 +22,20 @@ public class Program {
     private String title;
 
     @Lob
-    @Column(name = "description")
-    private String description;
-
-    @Lob
     @Column(name = "short_description")
     private String shortDescription;
 
     @Lob
-    @Column(name = "duration")
-    private String duration;
+    @Column(name = "description")
+    private String description;
 
-    @Column(name = "location", length = 64)
-    private String location;
+    @Lob
+    @Column(name = "responsibilities")
+    private String responsibilities;
+
+    @Lob
+    @Column(name = "offers")
+    private String offers;
 
     @Lob
     @Column(name = "knowledge_needed")
@@ -43,15 +46,19 @@ public class Program {
     private String experienceNeeded;
 
     @Lob
-    @Column(name = "salary")
-    private String salary;
-
-    @Lob
     @Column(name = "work_schedule")
     private String workSchedule;
 
-    @Column(name = "deadline")
-    private LocalDate deadline;
+    @Lob
+    @Column(name = "requirements")
+    private String requirements;
+
+    @Lob
+    @Column(name = "duration")
+    private String duration;
+
+    @Column(name = "location", length = 64)
+    private String location;
 
     @Lob
     @Column(name = "work_place")
@@ -60,11 +67,22 @@ public class Program {
     @Column(name = "nr_positions")
     private Integer nrPositions;
 
+    @Lob
+    @Column(name = "salary")
+    private String salary;
+
+    @Column(name = "deadline")
+    private LocalDate deadline;
+
     @Column(name = "review_count")
     private Integer reviewCount;
 
     @Column(name = "img_path")
     private String imgPath;
+
+    @Lob
+    @Column(name = "program_url_path")
+    private String programUrlPath;
 
     public Integer getId() {
         return id;
@@ -77,6 +95,7 @@ public class Program {
     public Company getCompany() {
         return company;
     }
+
     public void setCompany(Company company) {
         this.company = company;
     }
@@ -89,6 +108,14 @@ public class Program {
         this.title = title;
     }
 
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -97,20 +124,20 @@ public class Program {
         this.description = description;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getResponsibilities() {
+        return responsibilities;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setResponsibilities(String responsibilities) {
+        this.responsibilities = responsibilities;
     }
 
-    public String getLocation() {
-        return location;
+    public String getOffers() {
+        return offers;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setOffers(String offers) {
+        this.offers = offers;
     }
 
     public String getKnowledgeNeeded() {
@@ -129,14 +156,6 @@ public class Program {
         this.experienceNeeded = experienceNeeded;
     }
 
-    public String getSalary() {
-        return salary;
-    }
-
-    public void setSalary(String salary) {
-        this.salary = salary;
-    }
-
     public String getWorkSchedule() {
         return workSchedule;
     }
@@ -145,12 +164,28 @@ public class Program {
         this.workSchedule = workSchedule;
     }
 
-    public LocalDate getDeadline() {
-        return deadline;
+    public String getRequirements() {
+        return requirements;
     }
 
-    public void setDeadline(LocalDate deadline) {
-        this.deadline = deadline;
+    public void setRequirements(String requirements) {
+        this.requirements = requirements;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getWorkPlace() {
@@ -169,6 +204,22 @@ public class Program {
         this.nrPositions = nrPositions;
     }
 
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
+    }
+
     public Integer getReviewCount() {
         return reviewCount;
     }
@@ -185,11 +236,20 @@ public class Program {
         this.imgPath = imgPath;
     }
 
-    public String getShortDescription() {
-        return shortDescription;
+    public String getProgramUrlPath() {
+        return programUrlPath;
     }
 
-    public void setShortDescription(String shortDescription) {
-        this.shortDescription = shortDescription;
+    public void setProgramUrlPath(String programUrlPath) {
+        this.programUrlPath = programUrlPath;
     }
+
+    public String getUrlPath() {
+        return urlPath;
+    }
+
+    public void setUrlPath(String urlPath) {
+        this.urlPath = urlPath;
+    }
+
 }

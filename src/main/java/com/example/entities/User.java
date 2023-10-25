@@ -96,5 +96,4 @@ public class User {
         this.contacts = contacts;
     }
 
-    //User roles in db
 }

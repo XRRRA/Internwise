@@ -8,14 +8,14 @@
         </div>
 
         <h2 class="title">
-            <a href="blog-details.html">${program.title}</a>
+            <a href="/programs/${program.company.companyUrlPath}/${program.programUrlPath}">${program.title}</a>
         </h2>
 
         <div class="meta-top">
             <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i><a href="blog-details.html">${program.company.companyName}</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="${program.deadline}">${program.deadline}</time></a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-eye"></i> <a href="blog-details.html">${program.reviewCount} reviews</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i><a href="/programs/${program.company.companyUrlPath}/${program.programUrlPath}">${program.company.companyName}</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/programs/${program.company.companyUrlPath}/${program.programUrlPath}"><time datetime="${program.deadline}">${program.deadline}</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-eye"></i> <a href="/programs/${program.company.companyUrlPath}/${program.programUrlPath}">${program.reviewCount} reviews</a></li>
             </ul>
         </div>
 
@@ -26,7 +26,7 @@
         </div>
 
         <div class="read-more mt-auto align-self-end">
-            <a href="blog-details.html">View Post</a>
+            <a href="/programs/${program.company.companyUrlPath}/${program.programUrlPath}">View Post</a>
         </div>
 
     </article>
