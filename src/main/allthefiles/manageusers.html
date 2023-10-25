@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Internwise</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/LOGO.png" rel="icon">
+    <link href="assets/img/LOGO.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <!--<link href="assets/css/variables.css" rel="stylesheet"> -->
+    <link href="assets/css/variables-blue.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <a href="homepage.html" class="logo d-flex align-items-center scrollto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/LOGO.png" alt="Internwise Logo">
+            <h1>Internwise<span>.</span></h1>
+        </a>
+
+        <!-- Admin Dashboard Navigation centered -->
+        <nav id="navbar" class="navbar d-flex justify-content-center flex-grow-1">
+            <ul>
+                <li><a href="manage-internships.html">Manage Internships</a></li>
+                <li><a href="company-approvals.html">Company Approvals</a></li>
+                <li><a href="manageusers.html">Manage Students</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        </nav>
+
+    </div>
+</header>
+
+
+
+<section id="students-section" class="students-section py-custom">
+    <div class="container">
+        <div class="section-title d-flex justify-content-between align-items-center">
+            <div>
+                <h2>Student Management</h2>
+                <p>Manage registered students below:</p>
+            </div>
+            <button class="btn-action btn-add-student">Add Student</button>
+        </div>
+
+        <table id="studentsTable" class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>CV</th>
+                <th>Join Date</th>
+                <th>Last Activity</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <!-- Sample row for demonstration -->
+            <tr>
+                <td><img src="assets/img/team/team-1.jpg" alt="Avatar" width="50"></td>
+                <td>jordan@mail.com</td>
+                <td>Liviu Jordan</td>
+                <td><a href="path_to_cv.pdf" target="_blank">View CV</a></td>
+                <td>01-01-2023</td>
+                <td>10-10-2023</td>
+                <td>
+                    <!-- Ban dropdown -->
+                    <div class="ban-dropdown">
+                        <button class="btn-action ban-btn">Ban</button>
+                        <div class="ban-menu">
+                            <a href="#">1 Hour</a>
+                            <a href="#">1 Day</a>
+                            <a href="#">1 Week</a>
+                            <a href="#">1 Month</a>
+                            <a href="#">1 Year</a>
+                            <a href="#">Forever</a>
+                        </div>
+                    </div>
+                    <button class="btn-action delete-btn">Delete</button>
+                </td>
+            </tr>
+
+            <!-- Add more rows as needed for more students -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Add Student Modal -->
+<div id="addStudentModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Student</h2>
+        <form id="studentForm">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="avatar">Upload Avatar:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="cv">Upload CV:</label>
+                <input type="file" id="cv" name="cv" accept=".pdf">
+            </div>
+
+            <!-- Add other fields as required -->
+
+            <div class="form-group">
+                <input type="submit" value="Add Student">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

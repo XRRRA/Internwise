@@ -3350,5 +3350,110 @@ section {
 
 
 
+/* The behaviour of the manage students table */
+.py-custom {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+.btn-action {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 25px; /* Reduced vertical padding */
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 110px; /* Adjusted width */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.btn-action:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+}
+.ban-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.ban-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  max-height: 140px; /* Added this to control the maximum height */
+  overflow-y: auto;  /* Allow vertical scrolling if content exceeds max-height */
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.ban-menu a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.ban-menu a:last-child {
+  border-bottom: none;
+}
+
+.ban-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 150px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  flex: 1; /* This allows the input to take up the remaining width */
+}
+
 
 

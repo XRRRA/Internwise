@@ -325,6 +325,178 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  /**
+   * Ban And Delete Buttons Behaviour for Admin Dashboard
+    */
+
+  let dropdowns = document.querySelectorAll('.ban-dropdown');
+
+  dropdowns.forEach((dropdown) => {
+    let btn = dropdown.querySelector('.ban-btn');
+    let menu = dropdown.querySelector('.ban-menu');
+
+    btn.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'none' || !menu.style.display ? 'block' : 'none';
+    });
+
+    // Optionally: Close the dropdown if clicked outside
+    window.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  });
+
+
+  /**
+   * Add Student Button Behavior
+    */
+
+      // Reference to the "Add Student" button and modal
+  const addStudentButton = document.querySelector('.btn-add-student');
+  const addStudentModal = document.getElementById('addStudentModal');
+  const closeModal = document.querySelector('.close');
+  const studentForm = document.getElementById('studentForm');
+  const studentsTable = document.getElementById('studentsTable').getElementsByTagName('tbody')[0];
+
+  if (addStudentButton && addStudentModal && closeModal && studentForm && studentsTable) {
+
+    // Event listener for opening the modal
+    addStudentButton.addEventListener('click', () => {
+      addStudentModal.style.display = 'block';
+    });
+
+    // Event listener for closing the modal
+    closeModal.addEventListener('click', () => {
+      addStudentModal.style.display = 'none';
+    });
+
+    // Optionally, close the modal when clicking outside of it
+    window.addEventListener('click', (event) => {
+      if (event.target === addStudentModal) {
+        addStudentModal.style.display = 'none';
+      }
+    });
+
+    // Add a new student to the table upon form submission
+    studentForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let name = this.querySelector('#name').value;
+      let email = this.querySelector('#email').value;
+      let avatar = this.querySelector('#avatar').files[0];
+      let cv = this.querySelector('#cv').files[0];
+
+      // For simplicity, I'm assuming a fixed date for now. You can update as needed.
+      let joinDate = '01-01-2023';
+      let lastActivity = '10-10-2023';
+
+      let newRow = studentsTable.insertRow();
+
+      // Avatar column
+      let avatarCell = newRow.insertCell(0);
+      let imgElement = document.createElement('img');
+      imgElement.src = URL.createObjectURL(avatar);
+      imgElement.width = 50;
+      imgElement.alt = "Avatar";
+      avatarCell.appendChild(imgElement);
+
+      // Other columns
+      newRow.insertCell(1).textContent = email;
+      newRow.insertCell(2).textContent = name;
+
+      // CV column
+      let cvCell = newRow.insertCell(3);
+      let cvLink = document.createElement('a');
+      cvLink.href = URL.createObjectURL(cv);
+      cvLink.textContent = "View CV";
+      cvLink.target = "_blank";
+      cvCell.appendChild(cvLink);
+
+      newRow.insertCell(4).textContent = joinDate;
+      newRow.insertCell(5).textContent = lastActivity;
+
+      // Action buttons
+      // Action buttons
+      let actionCell = newRow.insertCell(6);
+
+// Ban button with dropdown
+      let banDiv = document.createElement('div');
+      banDiv.classList.add('ban-dropdown');
+
+      let banButton = document.createElement('button');
+      banButton.classList.add('btn-action', 'ban-btn');
+      banButton.textContent = 'Ban';
+      banDiv.appendChild(banButton);
+
+      let banMenu = document.createElement('div');
+      banMenu.classList.add('ban-menu');
+
+      let banOptions = ['1 Hour', '1 Day', '1 Week', '1 Month', '1 Year', 'Forever'];
+      banOptions.forEach(option => {
+        let anchor = document.createElement('a');
+        anchor.href = '#';
+        anchor.textContent = option;
+        banMenu.appendChild(anchor);
+      });
+
+      banDiv.appendChild(banMenu);
+      actionCell.appendChild(banDiv);
+
+// Delete button
+      let deleteButton = document.createElement('button');
+      deleteButton.classList.add('btn-action', 'delete-btn');
+      deleteButton.textContent = 'Delete';
+      actionCell.appendChild(deleteButton);
+
+
+      // Reset the form and close the modal
+      studentForm.reset();
+      addStudentModal.style.display = 'none';
+    });
+
+  }
+
+
+  /**
+   * Delete Button Behaviour
+   */
+
+
+  // Check if the studentsTable exists
+  if (studentsTable) {
+    // Add the event listener to the studentsTable for the delete buttons
+    studentsTable.addEventListener('click', function(event) {
+      if (event.target.classList.contains('delete-btn')) {
+        let rowToDelete = event.target.closest('tr');
+        if (rowToDelete) {
+          rowToDelete.remove();
+        }
+      }
+    });
+  } else {
+    console.error('studentsTable not found!');
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -435,6 +607,29 @@ function toggleStudentsTable() {
     table.style.display = "none";
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

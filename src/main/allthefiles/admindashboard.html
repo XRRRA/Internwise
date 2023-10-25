@@ -50,7 +50,7 @@
             <ul>
                 <li><a href="manage-internships.html">Manage Internships</a></li>
                 <li><a href="company-approvals.html">Company Approvals</a></li>
-                <li><a href="javascript:void(0);" onclick="toggleStudentsTable()">Manage Students</a></li>
+                <li><a href="manageusers.html">Manage Students</a></li>
                 <li><a href="reports.html">Reports</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
@@ -65,32 +65,29 @@
         <img src="assets/img/hero-carousel/admin.png" class="img-fluid animated">
     </div>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var dropdowns = document.querySelectorAll('.ban-dropdown');
+
+    dropdowns.forEach(function(dropdown) {
+        var btn = dropdown.querySelector('.ban-btn');
+        var menu = dropdown.querySelector('.ban-menu');
+
+        btn.addEventListener('click', function() {
+            menu.style.display = menu.style.display === 'none' || !menu.style.display ? 'block' : 'none';
+        });
+
+        // Optionally: Close the dropdown if clicked outside
+        window.addEventListener('click', function(event) {
+            if (!dropdown.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
-
-<table id="studentsTable" class="table table-bordered table-hover table-striped" style="display: none;">
-    <thead>
-    <tr>
-        <th>Avatar</th>
-        <th>Email</th>
-        <th>Name</th>
-        <th>CV</th>
-        <th>Join Date</th>
-        <th>Last Activity</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- Sample row for demonstration -->
-    <tr>
-        <td><img src="assets/img/team/team-1.jpg" alt="Avatar" width="50"></td>
-        <td>example@email.com</td>
-        <td>John Doe</td>
-        <td><a href="path_to_cv.pdf" target="_blank">View CV</a></td>
-        <td>01-01-2023</td>
-        <td>10-10-2023</td>
-    </tr>
-    </tbody>
-</table>
 
 
 
