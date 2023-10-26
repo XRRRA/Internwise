@@ -38,8 +38,7 @@ public class ProgramController {
     }
     @GetMapping(value = {"/{companyUrlPath}/{programUrlPath}"})
     public String getProductDetailedPage(@PathVariable String companyUrlPath, @PathVariable String programUrlPath, ModelMap model) {
-        String urlPat = "/"+companyUrlPath+"/"+programUrlPath;
-        Program program  = programService.getProgramsByProgramUrlPath(urlPat);
+        Program program  = programService.getProgramsByProgramUrlPath(programUrlPath);
 
         model.addAttribute("program", program);
         model.addAttribute("pageContent", "internships_details");
