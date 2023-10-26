@@ -39,12 +39,6 @@ public class ProgramServiceImpl implements ProgramService {
     }
 
     @Override
-    public PageableResponse<Program> getPrograms(Integer pageSize, Integer page) {
-        Page<Program> pageProgram = programRepository.findAll(PageRequest.of(page, pageSize));
-        return new PageableResponse<>(pageProgram.getTotalPages(), pageProgram.getNumberOfElements(), pageProgram.getContent());
-    }
-
-    @Override
     public Program updateProgramById(Program program) {
         return programRepository.save(program);
     }
@@ -53,5 +47,13 @@ public class ProgramServiceImpl implements ProgramService {
     public Program getProgramsByProgramUrlPath(String programUrlPath) {
         return programRepository.getProgramByUrlPath(programUrlPath);
     }
+
+    @Override
+    public PageableResponse<Program> getPrograms(Integer pageSize, Integer page) {
+        Page<Program> pageProgram = programRepository.findAll(PageRequest.of(page, pageSize));
+        return new PageableResponse<>((int) pageProgram.getTotalElements(), page, pageProgram.getContent());
+    }
+
+
 
 }

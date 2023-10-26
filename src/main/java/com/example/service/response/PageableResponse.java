@@ -1,6 +1,6 @@
 package com.example.service.response;
 
-import java.util.List;
+        import java.util.List;
 
 public class PageableResponse<T> {
     private Integer totalRecords;
@@ -36,4 +36,9 @@ public class PageableResponse<T> {
     public void setContent(List<T> content) {
         this.content = content;
     }
+
+    public int getTotalPages(int pageSize) {
+        return (int) Math.ceil((double) totalRecords / pageSize);
+    }
 }
+

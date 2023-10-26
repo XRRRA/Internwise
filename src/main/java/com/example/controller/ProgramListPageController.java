@@ -6,6 +6,7 @@ import com.example.service.response.PageableResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProgramListPageController {
@@ -14,13 +15,16 @@ public class ProgramListPageController {
         this.programService = programService;
     }
     @GetMapping(path = "/programs")
-    public String getPrograms(Model model){
-        PageableResponse<Program> first25Programs = programService.getPrograms(25,0);
+    public String getPrograms(@RequestParam(name = "page", defaultValue = "0") int page, Model model) {
+        int pageSize = 6;
+        PageableResponse<Program> programsPage = programService.getPrograms(pageSize, page);
 
         model.addAttribute("pageTitle", "Latest programs");
-        model.addAttribute("pageablePrograms", first25Programs);
+        model.addAttribute("pageablePrograms", programsPage);
+        model.addAttribute("pageSize", pageSize);
         model.addAttribute("pageContent", "program-list-body");
 
         return "layout";
     }
+
 }

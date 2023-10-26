@@ -31,9 +31,13 @@
 
                     <div class="blog-pagination">
                         <ul class="justify-content-center">
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            <#list 0..(pageablePrograms.getTotalPages(pageSize) - 1) as page>
+                                <#if page == pageablePrograms.getCurrentPage()>
+                                    <li class="active">${page + 1}</li>
+                                <#else>
+                                    <li><a href="/programs?page=${page}">${page + 1}</a></li>
+                                </#if>
+                            </#list>
                         </ul>
                     </div><!-- End blog pagination -->
 

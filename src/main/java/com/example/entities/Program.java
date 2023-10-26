@@ -11,64 +11,50 @@ public class Program {
     @Column(name = "program_id", nullable = false)
     private Integer id;
 
-    private String urlPath;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @Lob
-    @Column(name = "title")
+    @Column(name = "title", length = 64)
     private String title;
 
-    @Lob
-    @Column(name = "short_description")
+    @Column(name = "short_description", columnDefinition = "TEXT")
     private String shortDescription;
 
-    @Lob
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition = "LONGTEXT")
     private String description;
 
-    @Lob
-    @Column(name = "responsibilities")
+    @Column(name = "responsibilities", columnDefinition = "LONGTEXT")
     private String responsibilities;
 
-    @Lob
-    @Column(name = "offers")
+    @Column(name = "offers", columnDefinition = "LONGTEXT")
     private String offers;
 
-    @Lob
-    @Column(name = "knowledge_needed")
+    @Column(name = "knowledge_needed", columnDefinition = "LONGTEXT")
     private String knowledgeNeeded;
 
-    @Lob
-    @Column(name = "experience_needed")
+    @Column(name = "experience_needed", columnDefinition = "LONGTEXT")
     private String experienceNeeded;
 
-    @Lob
-    @Column(name = "work_schedule")
+    @Column(name = "work_schedule", columnDefinition = "TEXT")
     private String workSchedule;
 
-    @Lob
-    @Column(name = "requirements")
+    @Column(name = "requirements", columnDefinition = "LONGTEXT")
     private String requirements;
 
-    @Lob
-    @Column(name = "duration")
+    @Column(name = "duration", columnDefinition = "TEXT")
     private String duration;
 
     @Column(name = "location", length = 64)
     private String location;
 
-    @Lob
-    @Column(name = "work_place")
+    @Column(name = "work_place", columnDefinition = "TEXT")
     private String workPlace;
 
     @Column(name = "nr_positions")
     private Integer nrPositions;
 
-    @Lob
-    @Column(name = "salary")
+    @Column(name = "salary", columnDefinition = "TEXT")
     private String salary;
 
     @Column(name = "deadline")
@@ -77,13 +63,13 @@ public class Program {
     @Column(name = "review_count")
     private Integer reviewCount;
 
-    @Column(name = "img_path")
+    @Column(name = "img_path", columnDefinition = "TEXT")
     private String imgPath;
 
-    @Lob
-    @Column(name = "program_url_path")
+    @Column(name = "program_url_path", columnDefinition = "TEXT", nullable = false)
     private String programUrlPath;
 
+    private String urlPath;
     public Integer getId() {
         return id;
     }

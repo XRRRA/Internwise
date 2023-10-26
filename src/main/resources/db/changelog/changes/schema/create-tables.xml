@@ -38,36 +38,37 @@
 
     <!-- ChangeSet for creating the 'program' table -->
     <changeSet author="admin" id="202309280930-create-program" labels="version-0.0.1">
-        <sql>
-            CREATE TABLE program (
-                                     program_id int PRIMARY KEY,
-                                     company_id int,
-                                     title nvarchar(64),
---                                      descriptions
-                                     short_description text,
-                                     description text,
-                                     responsibilities text,
-                                     offers text,
---                                      requirements
-                                     knowledge_needed text,
-                                     experience_needed text,
-                                     work_schedule text,
-                                     requirements text,
---                                      need to know
-                                     duration text,
-                                     location text,
-                                     work_place text,
-                                     nr_positions int,
-                                     salary text,
---                                      other
-                                     deadline date,
-                                     review_count int,
-                                     img_path text,
-                                     program_url_path text,
-                                     FOREIGN KEY (company_id) REFERENCES company(company_id)
-            );
-            </sql>
+        <createTable tableName="program">
+            <column name="program_id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="company_id" type="INT"/>
+            <column name="title" type="TINYTEXT"/>
+            <column name="short_description" type="TEXT"/>
+            <column name="description" type="LONGTEXT"/>
+            <column name="responsibilities" type="LONGTEXT"/>
+            <column name="offers" type="LONGTEXT"/>
+            <column name="knowledge_needed" type="LONGTEXT"/>
+            <column name="experience_needed" type="LONGTEXT"/>
+            <column name="work_schedule" type="TEXT"/>
+            <column name="requirements" type="LONGTEXT"/>
+            <column name="duration" type="TEXT"/>
+            <column name="location" type="TEXT"/>
+            <column name="work_place" type="TEXT"/>
+            <column name="nr_positions" type="INT"/>
+            <column name="salary" type="TEXT"/>
+            <column name="deadline" type="DATE"/>
+            <column name="review_count" type="INT"/>
+            <column name="img_path" type="TEXT"/>
+            <column name="program_url_path" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="program" baseColumnNames="company_id"
+                                 constraintName="FK_program_company" referencedTableName="company" referencedColumnNames="company_id"/>
     </changeSet>
+
 
     <!-- ChangeSet for creating the 'review' table -->
     <changeSet author="admin" id="202309280930-create-review" labels="version-0.0.1">
@@ -77,7 +78,7 @@
                                     user_id int,
                                     program_id int,
                                     rating_stars tinyint,
-                                    review_text text,
+                                    review_text LONGTEXT,
                                     review_date date,
                                     FOREIGN KEY (user_id) REFERENCES users(user_id),
                                     FOREIGN KEY (program_id) REFERENCES program(program_id)
@@ -107,7 +108,7 @@
                                   chat_id int PRIMARY KEY,
                                   user_id int,
                                   company_id int,
-                                  message text,
+                                  message LONGTEXT,
                                   time_stamp datetime,
                                   status nvarchar(16),
                                   FOREIGN KEY (user_id) REFERENCES users(user_id),
