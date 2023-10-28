@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <!-- Variables CSS Files.-->
   <!--<link href="assets/css/variables.css" rel="stylesheet"> -->
   <link href="assets/css/variables-blue.css" rel="stylesheet">
 
@@ -262,16 +262,14 @@
         </div>
 
         <div class="col-lg-4">
-
           <div class="sidebar">
-
             <div class="sidebar-item search-form">
               <h3 class="sidebar-title">Search</h3>
               <form action="" class="mt-3">
-                <input type="text">
+                <input type="text" id="search-input">
                 <button type="submit"><i class="bi bi-search"></i></button>
               </form>
-            </div><!-- End sidebar search formn-->
+            </div><!-- End sidebar search form -->
 
             <div class="sidebar-item categories">
               <h3 class="sidebar-title">Categories</h3>
@@ -284,37 +282,21 @@
                 <li><a href="#">C++ Developer <span>(152)</span></a></li>
                 <li><a href="#">Java Developer <span>(141)</span></a></li>
               </ul>
-            </div><!-- End sidebar categories-->
+            </div><!-- End sidebar categories -->
 
             <div class="sidebar-item tags">
               <h3 class="sidebar-title">Tags</h3>
-              <ul class="mt-3">
-                <li><a href="#">Programming</a></li>
-                <li><a href="#">IT Field</a></li>
-                <li><a href="#">Future Is Now</a></li>
-                <li><a href="#">Designing</a></li>
-                <li><a href="#">Apple</a></li>
-                <li><a href="#">Amazon</a></li>
-                <li><a href="#">Full Stack Developer</a></li>
-                <li><a href="#">Disney</a></li>
-                <li><a href="#">Project Manager</a></li>
-                <li><a href="#">C++ Developer</a></li>
-                <li><a href="#">UI/UX Developer</a></li>
+              <ul id="tags-list" class="mt-3">
+                <!-- Tags will be added dynamically here -->
               </ul>
-            </div><!-- End sidebar tags-->
-
+            </div><!-- End sidebar tags -->
           </div><!-- End Blog Sidebar -->
-
         </div>
-
       </div>
-
-    </div>
     </div>
   </section><!-- End Blog Section -->
 
 </main><!-- End #main -->
-
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
 
