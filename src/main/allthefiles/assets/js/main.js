@@ -612,13 +612,81 @@ function toggleStudentsTable() {
 
 
 
+/*
+      User Profile Page, updating the avatar and the basic info
+ */
+
+function changeAvatar() {
+  // Function to change the avatar, e.g., open a file input dialog
+}
+
+
+function toggleEdit() {
+  const profileName = document.getElementById('profileName');
+  const profileInfo = document.getElementById('profileInfo');
+  const editButton = document.getElementById('editButton');
+
+  if (isEditable) {
+    // Save the changes (this can also be where you send changes to your backend)
+    const name = profileName.innerText;
+    const info = profileInfo.innerText;
+    // Save the name and info to your backend or local storage here
+    // For now, it just remains in the page without any backend saving.
+
+    // Make the content non-editable
+    profileName.contentEditable = "false";
+    profileInfo.contentEditable = "false";
+
+    // Change button text back to Edit
+    editButton.innerText = "Edit Information";
+
+  } else {
+    // Make the content editable
+    profileName.contentEditable = "true";
+    profileInfo.contentEditable = "true";
+
+    // Change button text to Save Changes
+    editButton.innerText = "Save Changes";
+  }
+
+  // Toggle the isEditable flag
+  isEditable = !isEditable;
+}
 
 
 
+function triggerFileInput() {
+  document.getElementById('avatarInput').click();
+}
+
+function updateAvatar() {
+  const input = document.getElementById('avatarInput');
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById('avatarImage').src = e.target.result;
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
 
 
 
+function toggleEditable() {
+  var profileName = document.getElementById("profileName");
+  var profileInfo = document.getElementById("profileInfo");
 
+  var isEditable = profileName.getAttribute("contenteditable");
+
+  if (isEditable === "true") {
+    profileName.setAttribute("contenteditable", "false");
+    profileInfo.setAttribute("contenteditable", "false");
+  } else {
+    profileName.setAttribute("contenteditable", "true");
+    profileInfo.setAttribute("contenteditable", "true");
+    profileName.focus();  // This will set the focus to the name field for immediate editing
+  }
+}
 
 
 
