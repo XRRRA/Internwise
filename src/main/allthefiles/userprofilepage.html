@@ -118,19 +118,49 @@
     </div>
 </div><!-- End Breadcrumbs -->
 
-<!-- Profile Container Section -->
-<div class="profile-container">
-    <div class="avatar-section">
-        <img src="assets/img/blog/girl5.jpg" id="avatarImage" alt="Profile Avatar" />
-        <input type="file" id="avatarInput" style="display: none;" onchange="updateAvatar()" />
+<div class="userpagecontainer">
+    <!-- Profile Container Section -->
+    <div class="profile-container">
+        <div class="avatar-section">
+            <img src="assets/img/blog/girl5.jpg" id="avatarImage" alt="Profile Avatar" />
+            <input type="file" id="avatarInput" style="display: none;" onchange="updateAvatar()" />
+        </div>
+        <h2 id="profileName">Kaylie Duggan</h2>
+        <p id="profileInfo">Full Stack Developer</p>
+        <button onclick="triggerFileInput()" class="action-btn">Change Avatar</button>
+        <button onclick="toggleEditable()" class="action-btn">Edit Information</button>
     </div>
-    <h2 id="profileName">Kaylie Duggan</h2>
-    <p id="profileInfo">Full Stack Developer</p>
-    <button onclick="triggerFileInput()" class="action-btn">Change Avatar</button>
-    <button onclick="toggleEditable()" class = "action-btn">Edit Information</button>
-
 </div>
 
+<div class="socialmediacontainer">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-github" style="font-size: 1.5rem;"></i>
+                <a href="#" class="ms-2">Github</a>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                <a href="#" class="ms-2">Instagram</a>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                <a href="#" class="ms-2">LinkedIn</a>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                <a href="#" class="ms-2">Facebook</a>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+                <a href="#" class="ms-2">Twitter</a>
+            </div>
+            <!-- Add an empty div to hold dynamically added links -->
+            <div id="socialLinks"></div>
+            <button onclick="addLink()" class="action-btn">Add Link</button>
+        </div>
+    </div>
+</div>
 
 
 

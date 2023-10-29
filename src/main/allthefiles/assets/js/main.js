@@ -690,7 +690,40 @@ function toggleEditable() {
 
 
 
+/*
+The links section on the user profile page
+ */
 
+
+function addLink() {
+  // Prompt the user to enter a link URL
+  const linkURL = prompt("Enter the link URL:");
+
+  if (linkURL) {
+    // Create a new link container
+    const linkContainer = document.createElement("div");
+    linkContainer.className = "d-flex align-items-center mt-2";
+
+    // Create an icon for the new link
+    const linkIcon = document.createElement("i");
+    linkIcon.className = "bi bi-globe";
+    linkIcon.style.fontSize = "1.5rem";
+
+    // Create an anchor element for the URL
+    const linkAnchor = document.createElement("a");
+    linkAnchor.href = linkURL;
+    linkAnchor.className = "ms-2";
+    linkAnchor.textContent = "Link"; // Display "Link" as the link name
+
+    // Append the icon and anchor element to the link container
+    linkContainer.appendChild(linkIcon);
+    linkContainer.appendChild(linkAnchor);
+
+    // Append the link container to the socialLinks div
+    const socialLinks = document.getElementById("socialLinks");
+    socialLinks.appendChild(linkContainer);
+  }
+}
 
 
 
