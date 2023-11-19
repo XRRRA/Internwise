@@ -1,0 +1,47 @@
+@startuml sequence
+actor "Normal User" as User
+actor Admin as Admin
+actor Company as Company
+participant "Internship System" as System
+participant "Internship Program" as Program
+participant "Internship Application" as Application
+participant "Inquiry" as Inquiry
+
+User -> System: Browse Internships
+activate System
+User -> System: View Internship Details
+User -> System: Apply for Internship
+activate Application
+System -> Program: Receive Application
+activate Program
+Program -> System: Confirm Application
+deactivate Program
+System -> Admin: Notify Application Received
+Admin -> Application: Review Application
+activate Admin
+Application -> Admin: Provide Application Details
+Admin -> System: Accept Application 
+System -> User: Notify Application Accepted
+deactivate Admin
+deactivate Application
+
+User -> System: Contact Admin
+activate Inquiry
+User -> System: Submit Inquiry
+System -> Admin: Receive Inquiry
+deactivate Inquiry
+Admin -> Inquiry: Review Inquiry
+activate Admin
+Inquiry -> Admin: Provide Inquiry Details
+Admin -> System: Respond to Inquiry
+System -> User: Receive Admin Response
+deactivate Admin
+
+Company -> System: Create Internship Program
+activate Program
+System -> Program: Receive Program Details
+Program -> System: Confirm Program Creation
+System -> User: Notify Program Created
+deactivate Program
+
+@enduml

@@ -1,0 +1,53 @@
+@startuml communication
+actor "Normal User" as NormalUser
+actor "Admin" as Admin
+actor "Company" as Company
+database "Internship Database" {
+  folder "Internship Programs"
+  folder "Applications"
+  folder "Inquiries"
+}
+
+NormalUser -> InternshipDatabase: "Browse Internships"
+NormalUser -> InternshipDatabase: "View Internship Details"
+NormalUser -> InternshipDatabase: "Apply for Internship"
+InternshipDatabase --> NormalUser: "Application Received"
+
+NormalUser -> Admin: "Contact Admin"
+NormalUser -> Admin: "Submit Inquiry"
+
+Admin --> InternshipDatabase: "Receive Inquiry"
+Admin --> InternshipDatabase: "Review Inquiry"
+Admin --> InternshipDatabase: "Provide Inquiry Details"
+Admin --> InternshipDatabase: "Respond to Inquiry"
+Admin --> InternshipDatabase: "Notify User: Admin Response"
+Admin --> InternshipDatabase: "Notify User: Admin Unavailable"
+
+Company -> InternshipDatabase: "Create Internship Program"
+Company -> InternshipDatabase: "Provide Program Details"
+
+InternshipDatabase --> Company: "Receive Program Details"
+InternshipDatabase --> Company: "Confirm Program Creation"
+InternshipDatabase --> NormalUser: "Notify User: Program Created"
+
+Admin --> InternshipDatabase: "Review Applications"
+Admin --> InternshipDatabase: "Process Applications"
+Admin --> InternshipDatabase: "Accept Application"
+Admin --> InternshipDatabase: "Notify User: Application Accepted"
+Admin --> InternshipDatabase: "Reject Application"
+Admin --> InternshipDatabase: "Notify User: Application Rejected"
+
+NormalUser -> InternshipDatabase: "Submit Application"
+InternshipDatabase --> NormalUser: "Notify Application Received"
+
+Company -> Admin: "Contact Admin"
+Company -> Admin: "Submit Inquiry"
+
+Admin --> InternshipDatabase: "Receive Inquiry"
+Admin --> InternshipDatabase: "Review Inquiry"
+Admin --> InternshipDatabase: "Provide Inquiry Details"
+Admin --> InternshipDatabase: "Respond to Inquiry"
+Admin --> InternshipDatabase: "Notify User: Admin Response"
+Admin --> InternshipDatabase: "Notify User: Admin Unavailable"
+
+@enduml

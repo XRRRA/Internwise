@@ -1,0 +1,130 @@
+@startuml activity
+start
+:User Request;
+
+if (User is Normal User?) then (yes)
+  :NormalUser.handleRequest();
+  fork
+    :Browse Internships;
+    :View Internship Details;
+  end fork
+  :Apply for Internship;
+
+  if (Apply for Internship?) then (yes)
+    :NormalUser.submitApplication();
+    fork
+      :Receive Application;
+      :Notify Application Received;
+    end fork
+    :Admin: --> (Review Applications);
+
+    if (Review Applications?) then (yes)
+      :Admin.processApplications();
+      fork
+        :Accept Application;
+        :Notify User: Application Accepted;
+      end fork
+      fork
+        :Reject Application;
+        :Notify User: Application Rejected;
+      end fork
+    endif
+  endif
+
+  :Contact Admin;
+  :Submit Inquiry;
+
+  if (Submit Inquiry?) then (yes)
+    :NormalUser.submitInquiry();
+    fork
+      :Receive Inquiry;
+      :Review Inquiry;
+      :Provide Inquiry Details;
+    end fork
+    :Admin: --> (Review Inquiries);
+
+    if (Review Inquiries?) then (yes)
+      :Admin.respondToInquiry();
+      fork
+        :Notify User: Admin Response;
+      end fork
+      fork
+        :Notify User: Admin Unavailable;
+      end fork
+    endif
+  endif
+
+else (User is Company)
+  :Company.handleRequest();
+  :Create Internship Program;
+  :Provide Program Details;
+
+  if (Provide Program Details?) then (yes)
+    :Company.createInternshipProgram();
+    fork
+      :Receive Program Details;
+      :Confirm Program Creation;
+    end fork
+    :Notify User: Program Created;
+  endif
+
+  :Contact Admin;
+
+  if (Contact Admin?) then (yes)
+    :Company.submitInquiry();
+    fork
+      :Receive Inquiry;
+      :Review Inquiry;
+      :Provide Inquiry Details;
+    end fork
+    :Admin: --> (Review Inquiries);
+
+    if (Review Inquiries?) then (yes)
+      :Admin.respondToInquiry();
+      fork
+        :Notify User: Admin Response;
+      end fork
+      fork
+        :Notify User: Admin Unavailable;
+      end fork
+    endif
+  endif
+
+endif
+
+:ClickServlet.handleRequest();
+:new page;
+
+if (Page.onSecurityCheck) then (true)
+  :Page.onInit();
+
+  if (isForward?) then (no)
+    :Process controls;
+    
+    if (continue processing?) then (no)
+      stop
+    endif
+
+    if (isPost?) then (yes)
+      :Page.onPost();
+    else (no)
+      :Page.onGet();
+    endif
+
+    :Page.onRender();
+  endif
+else (false)
+endif
+
+if (do redirect?) then (yes)
+  :Redirect process;
+else
+  if (do forward?) then (yes)
+    :Forward request;
+  else (no)
+    :Render page template;
+  endif
+endif
+
+stop
+@enduml

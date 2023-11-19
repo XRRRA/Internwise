@@ -1,0 +1,36 @@
+@startuml usecase
+(1. Browse Internships)
+(2. Contact Admin)
+(3. Manage Internships)
+(4. Review Applications)
+(5. Review Inquiries)
+(6. View Details)
+(7. Apply)
+(8. Submit Inquiry)
+(9. Create Program)
+(10. Accept)
+(11. Reject)
+(12. Close)
+(13. Manage Users)
+
+User --> (1. Browse Internships)
+User --> (2. Contact Admin)
+Admin --> (5. Review Inquiries)
+Admin --> (13. Manage Users)
+Company --> (3. Manage Internships)
+Company --> (2. Contact Admin)
+
+(1. Browse Internships) --> (6. View Details)
+(1. Browse Internships) --> (7. Apply)
+
+(2. Contact Admin) --> (8. Submit Inquiry)
+
+(3. Manage Internships) --> (9. Create Program)
+(3. Manage Internships) --> (4. Review Applications)
+
+(4. Review Applications) --> (10. Accept)
+(4. Review Applications) --> (11. Reject)
+
+(5. Review Inquiries) --> (12. Close)
+
+@enduml

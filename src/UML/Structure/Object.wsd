@@ -1,0 +1,63 @@
+@startuml object
+object User {
+  id: int
+  name: String
+  surname: String
+  email: String
+  cv: File
+  internshipApplications: List<InternshipApplication>
+  inquiries: List<Inquiry>
+}
+
+object Admin {
+  reviewedApplications: List<InternshipApplication>
+  inquiries: List<Inquiry>
+}
+
+object Company {
+  id: int
+  name: String
+  internshipPrograms: List<InternshipProgram>
+}
+
+object InternshipProgram {
+  id: int
+  title: String
+  description: String
+  company: Company
+  applicants: List<InternshipApplication>
+}
+
+object InternshipApplication {
+  id: int
+  user: User
+  program: InternshipProgram
+  status: ApplicationStatus
+  applicationDate: Date
+}
+
+object Inquiry {
+  id: int
+  user: User
+  subject: String
+  message: String
+  status: InquiryStatus
+  inquiryDate: Date
+}
+
+enum ApplicationStatus {
+  PENDING, APPROVED, REJECTED
+}
+
+enum InquiryStatus {
+  OPEN, CLOSED
+}
+
+User --|> InternshipApplication : Applies
+User --|> Inquiry : Contacts
+Admin --|> InternshipApplication : Reviews
+Admin --|> Inquiry : Responds
+Company --|> InternshipProgram : Creates
+Company --|> InternshipApplication : Reviews
+InternshipProgram --|> InternshipApplication : Manages
+@enduml
