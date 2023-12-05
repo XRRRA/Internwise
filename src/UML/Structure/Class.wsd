@@ -1,0 +1,75 @@
+@startuml Class
+class User {
+  +id: int
+  +name: String
+  +surname: String
+  +email: String
+}
+
+class NormalUser {
+  +cv: File
+  +internshipApplications: List<InternshipApplication>
+  +inquiries: List<Inquiry>
+  +applyForInternship(program: InternshipProgram): void
+  +contactAdmin(subject: String, message: String): void
+}
+
+class Admin {
+  +reviewedApplications: List<InternshipApplication>
+  +inquiries: List<Inquiry>
+  +reviewApplication(application: InternshipApplication): void
+  +respondToInquiry(inquiry: Inquiry): void
+}
+
+class Company {
+  +id: int
+  +name: String
+  +internshipPrograms: List<InternshipProgram>
+  +createInternshipProgram(title: String, description: String): void
+  +reviewApplicant(application: InternshipApplication): void
+}
+
+class InternshipProgram {
+  +id: int
+  +title: String
+  +description: String
+  +company: Company
+  +applicants: List<InternshipApplication>
+  +acceptApplicant(application: InternshipApplication): void
+  +rejectApplicant(application: InternshipApplication): void
+}
+
+class InternshipApplication {
+  +id: int
+  +user: NormalUser
+  +program: InternshipProgram
+  +status: ApplicationStatus
+}
+
+enum ApplicationStatus {
+  PENDING, APPROVED, REJECTED
+}
+
+class Inquiry {
+  +id: int
+  +user: NormalUser
+  +subject: String
+  +message: String
+  +status: InquiryStatus
+  +closeInquiry(): void
+}
+
+enum InquiryStatus {
+  OPEN, CLOSED
+}
+
+NormalUser --|> User
+Admin --|> User
+Company --|> User
+InternshipProgram -- Company: owns
+InternshipApplication "1" --o "1" NormalUser: applies
+InternshipApplication --|> ApplicationStatus
+Inquiry "1" --o "1" NormalUser: makes
+Inquiry --|> InquiryStatus
+
+@enduml

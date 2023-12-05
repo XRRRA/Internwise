@@ -1,0 +1,53 @@
+@startuml component
+package "Internship System" {
+  [User Management]
+  [Admin]
+  [Company]
+  [Internship Management]
+  [Communication]
+  [NormalUser]
+  [InternshipProgram]
+  [InternshipApplication]
+  [Inquiry]
+
+  [Database]
+
+  [Application Processing]
+  [Application Validator]
+  [Application Processor]
+
+  [Communication Handling]
+  [Notification Service]
+  [Inquiry Resolver]
+}
+
+[User Management] --> [Admin]
+[User Management] --> [Company]
+[Admin] --> [Internship Management]
+[Company] --> [Internship Management]
+[Communication] --> [NormalUser]
+
+[Company] --> [InternshipProgram]
+[Company] --> [InternshipApplication]
+[Company] --> [Inquiry]
+[Admin] --> [InternshipProgram]
+[Admin] --> [InternshipApplication]
+[Admin] --> [Inquiry]
+[NormalUser] --> [InternshipApplication]
+[NormalUser] --> [Inquiry]
+
+[Admin] --> [Application Processing]
+[Company] --> [Application Processing]
+[Application Processing] --> [Application Validator]
+[Application Processing] --> [Application Processor]
+
+[Communication] --> [Communication Handling]
+[Communication Handling] --> [Notification Service]
+[Communication Handling] --> [Inquiry Resolver]
+
+[User Management] --> [Database]
+[Admin] --> [Database]
+[Company] --> [Database]
+[Application Processing] --> [Database]
+[Communication Handling] --> [Database]
+@enduml
