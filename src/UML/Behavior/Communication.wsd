@@ -1,53 +1,36 @@
-@startuml communication
-actor "Normal User" as NormalUser
-actor "Admin" as Admin
-actor "Company" as Company
-database "Internship Database" {
-  folder "Internship Programs"
-  folder "Applications"
-  folder "Inquiries"
-}
+@startuml
 
-NormalUser -> InternshipDatabase: "Browse Internships"
-NormalUser -> InternshipDatabase: "View Internship Details"
-NormalUser -> InternshipDatabase: "Apply for Internship"
-InternshipDatabase --> NormalUser: "Application Received"
+!define DATABASE database
+!define RECTANGLE class
 
-NormalUser -> Admin: "Contact Admin"
-NormalUser -> Admin: "Submit Inquiry"
+participant "Normal User" as user
+participant "Admin" as admin
+participant "Company" as company
+participant "Internship Platform" as platform <<RECTANGLE>>
+participant "Database" as database <<DATABASE>>
 
-Admin --> InternshipDatabase: "Receive Inquiry"
-Admin --> InternshipDatabase: "Review Inquiry"
-Admin --> InternshipDatabase: "Provide Inquiry Details"
-Admin --> InternshipDatabase: "Respond to Inquiry"
-Admin --> InternshipDatabase: "Notify User: Admin Response"
-Admin --> InternshipDatabase: "Notify User: Admin Unavailable"
+user -> platform: Browse Internships
+platform -> database: Retrieve Internship List
+platform --> user: Display Internship List
 
-Company -> InternshipDatabase: "Create Internship Program"
-Company -> InternshipDatabase: "Provide Program Details"
+user -> platform: View Internship Details
+platform -> database: Retrieve Internship Details
+platform --> user: Display Internship Details
 
-InternshipDatabase --> Company: "Receive Program Details"
-InternshipDatabase --> Company: "Confirm Program Creation"
-InternshipDatabase --> NormalUser: "Notify User: Program Created"
+user -> platform: Apply for Internships
+platform -> database: Save Application
+platform --> user: Acknowledge Application Submission
 
-Admin --> InternshipDatabase: "Review Applications"
-Admin --> InternshipDatabase: "Process Applications"
-Admin --> InternshipDatabase: "Accept Application"
-Admin --> InternshipDatabase: "Notify User: Application Accepted"
-Admin --> InternshipDatabase: "Reject Application"
-Admin --> InternshipDatabase: "Notify User: Application Rejected"
+admin -> platform: Review Applications
+platform -> database: Retrieve Applications
+platform --> admin: Display Applications
 
-NormalUser -> InternshipDatabase: "Submit Application"
-InternshipDatabase --> NormalUser: "Notify Application Received"
+admin -> platform: Accept or Reject Applications
+platform -> database: Update Application Status
+platform --> admin: Notify Status Update
 
-Company -> Admin: "Contact Admin"
-Company -> Admin: "Submit Inquiry"
-
-Admin --> InternshipDatabase: "Receive Inquiry"
-Admin --> InternshipDatabase: "Review Inquiry"
-Admin --> InternshipDatabase: "Provide Inquiry Details"
-Admin --> InternshipDatabase: "Respond to Inquiry"
-Admin --> InternshipDatabase: "Notify User: Admin Response"
-Admin --> InternshipDatabase: "Notify User: Admin Unavailable"
+company -> platform: Create Internship Programs
+platform -> database: Save Internship Program
+platform --> company: Acknowledge Program Creation
 
 @enduml

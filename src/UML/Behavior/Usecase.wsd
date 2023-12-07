@@ -1,36 +1,32 @@
-@startuml usecase
-(1. Browse Internships)
-(2. Contact Admin)
-(3. Manage Internships)
-(4. Review Applications)
-(5. Review Inquiries)
-(6. View Details)
-(7. Apply)
-(8. Submit Inquiry)
-(9. Create Program)
-(10. Accept)
-(11. Reject)
-(12. Close)
-(13. Manage Users)
+@startuml
 
-User --> (1. Browse Internships)
-User --> (2. Contact Admin)
-Admin --> (5. Review Inquiries)
-Admin --> (13. Manage Users)
-Company --> (3. Manage Internships)
-Company --> (2. Contact Admin)
+left to right direction
 
-(1. Browse Internships) --> (6. View Details)
-(1. Browse Internships) --> (7. Apply)
+actor "Normal User" as user
+actor "Admin" as admin
+actor "Company" as company
 
-(2. Contact Admin) --> (8. Submit Inquiry)
+rectangle "Internship Platform" {
+  usecase "Browse Internships" as browse
+  usecase "View Internship Details" as viewDetails
+  usecase "Apply for Internships" as apply
+  usecase "Contact Admin" as contactAdmin
 
-(3. Manage Internships) --> (9. Create Program)
-(3. Manage Internships) --> (4. Review Applications)
+  admin --> (Review Applications)
+  admin --> (Accept or Reject Applications)
+  admin --> (Review Inquiries)
+  admin --> (Respond to Inquiries)
+  admin --> (Manage Internships)
+  admin --> (Manage Users)
 
-(4. Review Applications) --> (10. Accept)
-(4. Review Applications) --> (11. Reject)
+  user --> browse
+  user --> viewDetails
+  user --> apply
+  user --> contactAdmin
 
-(5. Review Inquiries) --> (12. Close)
+  company --> (Create Internship Programs)
+  company --> (Review Applications)
+  company --> (Contact Admin)
+}
 
 @enduml

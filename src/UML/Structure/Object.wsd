@@ -1,11 +1,11 @@
 @startuml object
+
 object User {
   id: int
   name: String
-  surname: String
   email: String
   cv: File
-  internshipApplications: List<InternshipApplication>
+  applications: List<InternshipApplication>
   inquiries: List<Inquiry>
 }
 
@@ -17,7 +17,7 @@ object Admin {
 object Company {
   id: int
   name: String
-  internshipPrograms: List<InternshipProgram>
+  programs: List<InternshipProgram>
 }
 
 object InternshipProgram {
@@ -25,7 +25,7 @@ object InternshipProgram {
   title: String
   description: String
   company: Company
-  applicants: List<InternshipApplication>
+  applications: List<InternshipApplication>
 }
 
 object InternshipApplication {
@@ -46,18 +46,18 @@ object Inquiry {
 }
 
 enum ApplicationStatus {
-  PENDING, APPROVED, REJECTED
-}
+    PENDING, APPROVED, REJECTED
+    }
 
 enum InquiryStatus {
-  OPEN, CLOSED
+    OPEN, CLOSED
 }
 
-User --|> InternshipApplication : Applies
-User --|> Inquiry : Contacts
-Admin --|> InternshipApplication : Reviews
-Admin --|> Inquiry : Responds
-Company --|> InternshipProgram : Creates
-Company --|> InternshipApplication : Reviews
-InternshipProgram --|> InternshipApplication : Manages
+User --|> InternshipApplication
+User --|> Inquiry
+Admin --|> InternshipApplication
+Admin --|> Inquiry
+Company --|> InternshipProgram
+Company --|> InternshipApplication
+InternshipProgram --|> InternshipApplication
 @enduml

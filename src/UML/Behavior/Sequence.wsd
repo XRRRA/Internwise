@@ -1,47 +1,47 @@
-@startuml sequence
-actor "Normal User" as User
-actor Admin as Admin
-actor Company as Company
-participant "Internship System" as System
-participant "Internship Program" as Program
-participant "Internship Application" as Application
-participant "Inquiry" as Inquiry
+@startuml
 
-User -> System: Browse Internships
-activate System
-User -> System: View Internship Details
-User -> System: Apply for Internship
-activate Application
-System -> Program: Receive Application
-activate Program
-Program -> System: Confirm Application
-deactivate Program
-System -> Admin: Notify Application Received
-Admin -> Application: Review Application
-activate Admin
-Application -> Admin: Provide Application Details
-Admin -> System: Accept Application 
-System -> User: Notify Application Accepted
-deactivate Admin
-deactivate Application
+actor "Normal User" as user
+actor "Admin" as admin
+actor "Company" as company
 
-User -> System: Contact Admin
-activate Inquiry
-User -> System: Submit Inquiry
-System -> Admin: Receive Inquiry
-deactivate Inquiry
-Admin -> Inquiry: Review Inquiry
-activate Admin
-Inquiry -> Admin: Provide Inquiry Details
-Admin -> System: Respond to Inquiry
-System -> User: Receive Admin Response
-deactivate Admin
+participant "Internship Platform" as platform
+participant "Internship Catalog" as catalog
+participant "Application Manager" as appManager
+participant "Inquiry System" as inquirySystem
+participant "Internship Management" as internshipManagement
 
-Company -> System: Create Internship Program
-activate Program
-System -> Program: Receive Program Details
-Program -> System: Confirm Program Creation
-System -> User: Notify Program Created
-deactivate Program
+
+user -> catalog: Browse Internships
+catalog -> user: Display Internship List
+
+user -> catalog: View Internship Details
+catalog -> user: Display Internship Details
+
+user -> appManager: Apply for Internships
+
+admin -> appManager: Review Applications
+appManager -> admin: Provide Application Details
+admin -> appManager: Accept or Reject Applications
+appManager -> user: Notify Application Status
+
+admin -> inquirySystem: Respond to Inquiries
+inquirySystem -> admin: Display Inquiry Details
+admin -> inquirySystem: Save Response
+inquirySystem -> user: Notify User
+
+admin -> internshipManagement: Manage Internships
+internshipManagement -> admin: Display Internship Management Options
+
+admin -> internshipManagement: Manage Users
+internshipManagement -> admin: Display User Management Options
+
+admin -> internshipManagement: Ban User or Company
+internshipManagement -> admin: Display Ban Options
+
+company -> internshipManagement: Create Internship Programs
+internshipManagement -> company: Display Program Creation Form
+company -> appManager: Review Applications
+appManager -> company: Provide Application Details
+company -> inquirySystem: Contact Admin
 
 @enduml
