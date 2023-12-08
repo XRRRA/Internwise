@@ -2778,7 +2778,7 @@ section {
   color: #fff;
   border: none;
   border-radius: 25px;
-  padding: 8px 25px; /* Reduced vertical padding */
+  padding: 8px 25px;
   font-size: 14px;
   cursor: pointer;
   margin-right: 10px;
@@ -2787,7 +2787,7 @@ section {
   transition: background-color 0.3s ease;
 }
 .btn-action:hover {
-  background-color: #0056b3; /* Darker shade for hover */
+  background-color: #0056b3;
 }
 .ban-dropdown {
   position: relative;
@@ -2799,8 +2799,8 @@ section {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 120px;
-  max-height: 140px; /* Added this to control the maximum height */
-  overflow-y: auto;  /* Allow vertical scrolling if content exceeds max-height */
+  max-height: 140px;
+  overflow-y: auto;
   z-index: 1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -2864,36 +2864,42 @@ section {
 }
 
 .form-group label {
-  width: 150px; /* Adjust as needed */
+  width: 150px;
   margin-right: 10px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"] {
-  flex: 1; /* This allows the input to take up the remaining width */
+  flex: 1;
 }
 
 
 
 
-/* Profile Container CSS */
+/* Container for all profile elements */
 .userpagecontainer {
   display: flex;
+  justify-content: start;
+  align-items: stretch;
+  gap: 30px;
+  padding: 20px;
+  margin-top: 30px;
 }
 
+/* Profile Container CSS */
+/* Profile Container CSS */
 .profile-container {
   border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  max-width: 300px;
-  margin-left: 50px;
-  margin-top: 30px; /* Add a margin to adjust the spacing */
-}
-
-.avatar-section {
-  position: relative;
-  margin-bottom: 20px;
+  flex-basis: 300px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-section img {
@@ -2904,14 +2910,17 @@ section {
 }
 
 .action-btn {
+  display: block;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #007bff;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: auto;
+  align-self: center;
 }
 
 .action-btn:hover {
@@ -2926,35 +2935,50 @@ section {
   cursor: pointer;
 }
 
-#profileName {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 250px;
-}
-
-#profileName:hover, #profileInfo:hover {
-  background-color: #f5f5f5;
-}
-
-[contenteditable="true"]:hover {
-  background-color: #f5f5f5;
-  border-bottom: 1px dashed #ccc;
-}
-
-/* Social Media Links Container CSS */
-.socialmediacontainer {
+/* Input Container CSS */
+.input-container {
   border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 5px;
-  text-align: center;
-  width: 300px; /* Set width to match the first container */
-  margin-left: 50px;
-  margin-top: 30px;
+  flex-grow: 1;
+  min-width: 0;
 }
 
+.input-container form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+.form-group {
+  margin-bottom: 20px;
+}
 
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
 
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .userpagecontainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
+  .profile-container,
+  .input-container {
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 20px;
+  }
+}

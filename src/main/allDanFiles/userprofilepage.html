@@ -59,7 +59,7 @@
 
                 <li><a class="nav-link scrollto" href="homepage.html#about">About</a></li>
                 <li><a class="nav-link scrollto" href="homepage.html#featured-services">Services</a></li>
-                <li><a class="nav-link scrollto" href="homepage.html">Create your CV</a></li>
+                <li><a class="nav-link scrollto" href="https://europa.eu/europass/en">Create your CV</a></li>
                 <li><a class="nav-link scrollto" href="homepage.html#contact">Contact</a></li>
                 <li><a href="catalog.html">Internships</a></li>
                 <li class="dropdown megamenu"><a href="#"><span>Partners</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -118,50 +118,63 @@
     </div>
 </div><!-- End Breadcrumbs -->
 
-<div class="userpagecontainer">
-    <!-- Profile Container Section -->
-    <div class="profile-container">
-        <div class="avatar-section">
-            <img src="assets/img/blog/girl5.jpg" id="avatarImage" alt="Profile Avatar" />
-            <input type="file" id="avatarInput" style="display: none;" onchange="updateAvatar()" />
+    <div class="userpagecontainer">
+        <!-- Profile Container Section -->
+        <div class="profile-container">
+            <div class="avatar-section">
+                <img src="assets/img/blog/girl5.jpg" id="avatarImage" alt="Profile Avatar" />
+                <input type="file" id="avatarInput" style="display: none;" onchange="updateAvatar()" />
+            </div>
+            <h2 id="profileName">Kaylie Duggan</h2>
+            <p id="profileInfo">Full Stack Developer</p>
+            <button onclick="triggerFileInput()" class="action-btn">Change Avatar</button>
+            <button onclick="toggleEditable()" class="action-btn">Edit Information</button>
         </div>
-        <h2 id="profileName">Kaylie Duggan</h2>
-        <p id="profileInfo">Full Stack Developer</p>
-        <button onclick="triggerFileInput()" class="action-btn">Change Avatar</button>
-        <button onclick="toggleEditable()" class="action-btn">Edit Information</button>
-    </div>
-</div>
 
-<div class="socialmediacontainer">
-    <div class="card">
-        <div class="card-body">
-            <div class="d-flex align-items-center">
-                <i class="bi bi-github" style="font-size: 1.5rem;"></i>
-                <a href="#" class="ms-2">Github</a>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
-                <a href="#" class="ms-2">Instagram</a>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-                <a href="#" class="ms-2">LinkedIn</a>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
-                <a href="#" class="ms-2">Facebook</a>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
-                <a href="#" class="ms-2">Twitter</a>
-            </div>
 
-            <div id="socialLinks"></div>
-            <button onclick="addLink()" class="action-btn">Add Link</button>
+
+        <div class="input-container">
+            <form>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="jobPost">Job Post</label>
+                    <input type="text" id="jobPost" placeholder="Enter job post">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Enter address">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter mobile phone">
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" id="zipCode" placeholder="Enter zip code">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                        <option value="germany">Germany</option>
+                        <option value="france">France</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="japan">Japan</option>
+                        <option value="south_korea">South Korea</option>
+                    </select>
+                </div>
+                <button type="submit" class="action-btn">Update Information</button>
+            </form>
         </div>
-    </div>
-</div>
 
+    </div>
 
 
 
